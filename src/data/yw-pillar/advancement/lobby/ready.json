@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "ready":{
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "red_dye",
+                    "components": {
+                        "custom_model_data": {
+                            "strings": ["spectator"]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:lobby/ready"
+    }
+}

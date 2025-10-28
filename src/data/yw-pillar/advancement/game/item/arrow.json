@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "get_bow":{
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "bow",
+                            "crossbow"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:game/item/arrow"
+    }
+}

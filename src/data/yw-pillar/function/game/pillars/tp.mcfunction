@@ -1,0 +1,1 @@
+$function yw-pillar:game/pillars/$(map_id)/$(player_count)

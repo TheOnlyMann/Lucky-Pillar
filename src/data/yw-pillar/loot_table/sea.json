@@ -1,0 +1,34 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "value": "yw-pillar:main",
+                    "weight": 80
+                },
+                {
+                    "type": "group",
+                    "children": [
+                        {
+                            "type": "loot_table",
+                            "value": "yw-pillar:fishing/fish",
+                            "weight": 8
+                        },
+                        {
+                            "type": "loot_table",
+                            "value": "yw-pillar:fishing/junk",
+                            "weight": 12
+                        },
+                        {
+                            "type": "loot_table",
+                            "value": "yw-pillar:fishing/treasure",
+                            "weight": 5
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "spectator":{
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "green_dye",
+                    "components": {
+                        "custom_model_data": {
+                            "strings": ["ready"]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:lobby/spectator"
+    }
+}

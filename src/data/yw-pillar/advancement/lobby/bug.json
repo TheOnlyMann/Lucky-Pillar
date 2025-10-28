@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "bug":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ita.bug\",\"lobby.bug\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:lobby/bug" 
+    }
+}

@@ -1,0 +1,4 @@
+def event_template(name,color,desc):
+    title @a title ["",{text:f"{name}",color:f"{color}"}]
+    title @a subtitle ["",{text:f"{desc}"}]
+    data modify storage yw-pillar:settings game.event_name set value f"{name}"

@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "play_button":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ita.play_button\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:game/start" 
+    }
+}

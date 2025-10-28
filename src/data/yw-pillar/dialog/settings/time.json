@@ -1,0 +1,94 @@
+{
+    "type": "multi_action",
+    "title": [
+        "",
+        {
+            "color": "#bd2fc2",
+            "text": "幸"
+        },
+        {
+            "color": "#cf5f85",
+            "text": "运"
+        },
+        {
+            "color": "#e28e47",
+            "text": "之"
+        },
+        {
+            "color": "#f4bd0a",
+            "text": "柱 "
+        },
+        "| 时间设置"
+    ],
+    "body": [],
+    "inputs": [
+        {
+            "key": "loot_time",
+            "type": "number_range",
+            "label": {
+                "text": "物品间隔时间"
+            },
+            "start": 1,
+            "end": 101,
+            "step": 1,
+            "initial": 5,
+            "label_format": "%1$s：%2$s秒"
+        },
+        {
+            "key": "event_time",
+            "type": "number_range",
+            "label": {
+                "text": "事件间隔时间"
+            },
+            "start": 1,
+            "end": 101,
+            "step": 1,
+            "initial": 60,
+            "label_format": "%1$s：%2$s秒"
+        },
+        {
+            "key": "border_time",
+            "type": "number_range",
+            "label": {
+                "text": "边界收缩时间"
+            },
+            "start": 1,
+            "end": 101,
+            "step": 1,
+            "initial": 45,
+            "label_format": "%1$s：%2$s秒"
+        },
+        {
+            "key": "begin_time",
+            "type": "number_range",
+            "label": {
+                "text": "准备时间"
+            },
+            "start": 1,
+            "end": 101,
+            "step": 1,
+            "initial": 5,
+            "label_format": "%1$s：%2$s秒"
+        }
+    ],
+    "actions": [
+        {
+            "label": {
+                "text": "应用"
+            },
+            "action": {
+                "type": "dynamic/run_command",
+                "template": "function yw-pillar:settings/time {loot_time:$(loot_time),event_time:$(event_time),border_time:$(border_time),begin_time:$(begin_time)}"
+            }
+        },
+        {
+            "label": {
+                "text": "返回"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.Dialog set 1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "select",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "model",
+            "model": "item/stick"
+        },
+        "cases": [
+            {
+                "model": {
+                    "type": "model",
+                    "model": "yw-pillar:meme/hahaha"
+                },
+                "when": "hahaha"
+            }
+        ]
+    }
+}

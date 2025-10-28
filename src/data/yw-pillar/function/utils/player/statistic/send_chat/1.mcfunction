@@ -1,0 +1,1 @@
+$function yw-pillar:utils/player/statistic/send_chat/2 with storage yw-pillar:statistics temp."$(UUID)"

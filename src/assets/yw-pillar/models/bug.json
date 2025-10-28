@@ -1,0 +1,9 @@
+{
+
+	"parent": "yw-pillar:bili",
+	"textures": {
+		"2": "yw-pillar:item/social/bug",
+		"4": "yw-pillar:item/social/base",
+		"particle": "yw-pillar:item/social/base"
+	}
+}

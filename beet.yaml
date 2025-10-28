@@ -1,0 +1,46 @@
+id: "yw-pillar"
+name: "幸运之柱"
+description: ""
+author: "一条鱼丸_"
+
+version: "0.1.3"
+minecraft: "1.21"
+
+directory: "."
+output: "build"
+ignore: []
+
+require:
+    - "stewbeet"
+    - "bolt"
+data_pack:
+    name: "yw-pillar-datapack" 
+    load: ["src"]    
+    pack_format: 81
+    supported_formats: [81.0,1000.0] 
+    min_format: 81.0
+    max_format: 1000.0
+
+resource_pack:
+    name: yw-pillar-resourcepack 
+    load: ["src"]      
+    pack_format: 61
+    supported_formats: [61.0,1000.0] 
+    min_format: 61.0
+    max_format: 1000.0
+
+pipeline:
+    - "mecha"
+    - "src.plugin.auto_lang"
+    - "script.custom_function_headers"
+    - "script.insert"
+    - "stewbeet.plugins.auto.headers"
+    
+    
+meta:
+    mc_version: "25w44a"
+    bolt:
+      entrypoint: 
+        - '*'
+    mecha:
+        commands: "https://gh-proxy.com/https://github.com/misode/mcmeta/blob/summary/commands/data.json"

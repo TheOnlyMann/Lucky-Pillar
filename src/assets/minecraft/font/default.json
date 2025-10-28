@@ -1,0 +1,33 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "yw-pillar:font/lucky_pillar_256.png",
+            "ascent": 32,
+            "height": 64,
+            "chars": [
+                "\uE000"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "yw-pillar:font/lucky_pillar_craft_256.png",
+            "ascent": 64,
+            "height": 80,
+            "chars": [
+                "\uE001"
+            ]
+        },
+        {
+            "type": "space",
+            "advances": {
+                "󏿬": -20,
+                "󏾰":-80,
+                "󏾦":-90,
+                "󏾡":-95,
+                "󏼸":-200,
+                "󏾜":-100
+            }
+        }
+    ]
+}

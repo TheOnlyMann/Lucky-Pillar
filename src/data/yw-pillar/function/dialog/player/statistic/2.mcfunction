@@ -1,0 +1,1 @@
+$function yw-pillar:dialog/player/statistic/3 with storage yw-pillar:statistics temp."$(UUID)"

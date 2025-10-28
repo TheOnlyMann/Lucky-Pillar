@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "value": "yw-pillar:all_item",
+                    "weight": 99
+                },
+                {
+                    "type": "loot_table",
+                    "value": "yw-pillar:potion",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

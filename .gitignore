@@ -1,0 +1,11 @@
+changelog.md
+note.md
+build
+.vscode
+
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+pyproject.toml
+release

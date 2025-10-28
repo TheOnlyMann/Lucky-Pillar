@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "bili":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ita.bili\",\"lobby.bili\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:lobby/bili" 
+    }
+}

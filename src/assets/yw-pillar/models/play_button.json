@@ -1,0 +1,54 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "yw-pillar:item/play_button",
+		"particle": "yw-pillar:item/play_button"
+	},
+	"elements": [
+		{
+			"from": [1, 5, 6],
+			"to": [14, 10, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 6, 6]},
+			"faces": {
+				"north": {"uv": [0, 0, 6.5, 2.5], "texture": "#0"},
+				"east": {"uv": [6.5, 2, 7.5, 4.5], "texture": "#0"},
+				"south": {"uv": [0, 2.5, 6.5, 5], "texture": "#0"},
+				"west": {"uv": [6.5, 6.5, 7.5, 9], "texture": "#0"},
+				"up": {"uv": [6.5, 7.5, 0, 6.5], "texture": "#0"},
+				"down": {"uv": [13, 0, 6.5, 1], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 6, 8],
+			"to": [13, 9, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 7, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 5.5, 6.5], "texture": "#0"},
+				"east": {"uv": [0, 7.5, 0.5, 9], "texture": "#0"},
+				"south": {"uv": [5.5, 5, 11, 6.5], "texture": "#0"},
+				"west": {"uv": [0.5, 7.5, 1, 9], "texture": "#0"},
+				"up": {"uv": [12, 1.5, 6.5, 1], "texture": "#0"},
+				"down": {"uv": [12, 1.5, 6.5, 2], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"ground": {
+			"translation": [0, 0.25, 0]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.625, 0.625, 0.625]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}
