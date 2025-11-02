@@ -1,0 +1,180 @@
+def pillar_tempalte(name,block):
+    function f"yw-pillar:game/pillars/{name}/2":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 8 0 63 8 f"{block}"
+        fill 0 1 -8 0 63 -8 f"{block}"
+        place template yw-pillar:cage -1 64 7
+        place template yw-pillar:cage -1 64 -9
+
+        tp @a[scores={Number=1}] 0 65 8 -180 0
+        tp @a[scores={Number=2}] 0 65 -8 0 0
+
+    function f"yw-pillar:game/pillars/{name}/3":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 6 0 63 6 f"{block}"
+        fill -5 1 -5 -5 63 -5 f"{block}"
+        fill 5 1 -5 5 63 -5 f"{block}"
+        place template yw-pillar:cage -1 64 5
+        place template yw-pillar:cage -6 64 -6
+        place template yw-pillar:cage 4 64 -6
+
+        tp @a[scores={Number=1}] 0 65 6 -180 0
+        tp @a[scores={Number=2}] -5 65 -5 -45 0
+        tp @a[scores={Number=3}] 5 65 -5 45 0
+
+    function f"yw-pillar:game/pillars/{name}/4":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 8 0 63 8 f"{block}"
+        fill 0 1 -8 0 63 -8 f"{block}"
+        fill 8 1 0 8 63 0 f"{block}"
+        fill -8 1 0 -8 63 0 f"{block}"
+        place template yw-pillar:cage -1 64 7
+        place template yw-pillar:cage -1 64 -9
+        place template yw-pillar:cage 7 64 -1
+        place template yw-pillar:cage -9 64 -1
+
+        tp @a[scores={Number=1}] 0 65 8 -180 0
+        tp @a[scores={Number=2}] 0 65 -8 0 0
+        tp @a[scores={Number=3}] 8 65 0 90 0
+        tp @a[scores={Number=4}] -8 65 0 -90 0
+
+    function f"yw-pillar:game/pillars/{name}/5":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 8 0 63 8 f"{block}"
+        fill -8 1 2 -8 63 2 f"{block}"
+        fill 8 1 2 8 63 2 f"{block}"
+        fill -5 1 -6 -5 63 -6 f"{block}"
+        fill 5 1 -6 5 63 -6 f"{block}"
+
+        place template yw-pillar:cage -1 64 7
+        place template yw-pillar:cage -9 64 1
+        place template yw-pillar:cage 7 64 1
+        place template yw-pillar:cage -6 64 -7
+        place template yw-pillar:cage 4 64 -7
+
+        tp @a[scores={Number=1}] 0 65 8 -180 0
+        tp @a[scores={Number=2}] -8 65 2 -90 0
+        tp @a[scores={Number=3}] 8 65 2 90 0
+        tp @a[scores={Number=4}] -5 65 -6 -40 0
+        tp @a[scores={Number=5}] 5 65 -6 40 0
+
+    function f"yw-pillar:game/pillars/{name}/6":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 9 0 63 9 f"{block}"
+        fill -8 1 5 -8 63 5 f"{block}"
+        fill 8 1 5 8 63 5 f"{block}"
+        fill -8 1 -5 -8 63 -5 f"{block}"
+        fill 8 1 -5 8 63 -5 f"{block}"
+        fill 0 1 -9 0 63 -9 f"{block}"
+
+        place template yw-pillar:cage -1 64 8
+        place template yw-pillar:cage -9 64 4
+        place template yw-pillar:cage 7 64 4
+        place template yw-pillar:cage -9 64 -6
+        place template yw-pillar:cage 7 64 -6
+        place template yw-pillar:cage -1 64 -10
+
+        tp @a[scores={Number=1}] 0 65 9 180 0
+        tp @a[scores={Number=2}] -8 65 5 -120 0
+        tp @a[scores={Number=3}] 8 65 5 120 0
+        tp @a[scores={Number=4}] -8 65 -5 -45 0
+        tp @a[scores={Number=5}] 8 65 -5 45 0
+        tp @a[scores={Number=6}] 0 65 -9 0 0
+
+    function f"yw-pillar:game/pillars/{name}/7":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 10 0 63 10 f"{block}"
+        fill -8 1 6 -8 63 6 f"{block}"
+        fill 8 1 6 8 63 6 f"{block}"
+        fill -10 1 -2 -10 63 -2 f"{block}"
+        fill 10 1 -2 10 63 -2 f"{block}"
+        fill -4 1 -9 -4 63 -9 f"{block}"
+        fill 4 1 -9 4 63 -9 f"{block}"
+
+        place template yw-pillar:cage -1 64 9
+        place template yw-pillar:cage -9 64 5
+        place template yw-pillar:cage 7 64 5
+        place template yw-pillar:cage -11 64 -3
+        place template yw-pillar:cage 9 64 -3
+        place template yw-pillar:cage -5 64 -10
+        place template yw-pillar:cage 3 64 -10
+
+        tp @a[scores={Number=1}] 0 65 10 180 0
+        tp @a[scores={Number=2}] -8 65 6 -130 0
+        tp @a[scores={Number=3}] 8 65 6 130 0
+        tp @a[scores={Number=4}] -10 65 -2 -90 0
+        tp @a[scores={Number=5}] 10 65 -2 90 0
+        tp @a[scores={Number=6}] -4 65 -9 -40 0
+        tp @a[scores={Number=7}] 4 65 -9 40 0
+
+    function f"yw-pillar:game/pillars/{name}/8":
+        place template f"yw-pillar:pillar/{name}/2" -16 0 -16
+        fill 0 1 11 0 63 11 f"{block}"
+        fill -8 1 8 -8 63 8 f"{block}"
+        fill 8 1 8 8 63 8 f"{block}"
+        fill -11 1 0 -11 63 0 f"{block}"
+        fill 11 1 0 11 63 0 f"{block}"
+        fill -8 1 -8 -8 63 -8 f"{block}"
+        fill 8 1 -8 8 63 -8 f"{block}"
+        fill 0 1 -11 0 63 -11 f"{block}"
+
+        place template yw-pillar:cage -1 64 10
+        place template yw-pillar:cage -9 64 7
+        place template yw-pillar:cage 7 64 7
+        place template yw-pillar:cage -12 64 -1
+        place template yw-pillar:cage 10 64 -1
+        place template yw-pillar:cage -9 64 -9
+        place template yw-pillar:cage 7 64 -9
+        place template yw-pillar:cage -1 64 -12
+
+        tp @a[scores={Number=1}] 0 65 11 135 0
+        tp @a[scores={Number=2}] -8 65 8 0 0
+        tp @a[scores={Number=3}] 8 65 8 -135 0
+        tp @a[scores={Number=4}] -11 65 0 -90 0
+        tp @a[scores={Number=5}] 11 65 0 90 0
+        tp @a[scores={Number=6}] -8 65 -8 45 0
+        tp @a[scores={Number=7}] 8 65 -8 0 0
+        tp @a[scores={Number=8}] 0 65 -11 -45 0
+    
+
+    function f"yw-pillar:game/pillars/{name}/clear_cage":
+        place template yw-pillar:cage_empty -1 64 7
+        place template yw-pillar:cage_empty -1 64 -9
+        place template yw-pillar:cage_empty 7 64 -1
+        place template yw-pillar:cage_empty -9 64 -1
+
+        place template yw-pillar:cage_empty -1 64 5
+        place template yw-pillar:cage_empty -6 64 -6
+        place template yw-pillar:cage_empty 4 64 -6
+
+        place template yw-pillar:cage_empty -1 64 -1
+
+        place template yw-pillar:cage_empty -1 64 7
+        place template yw-pillar:cage_empty -9 64 1
+        place template yw-pillar:cage_empty 7 64 1
+        place template yw-pillar:cage_empty -6 64 -7
+        place template yw-pillar:cage_empty 4 64 -7
+
+        place template yw-pillar:cage_empty -1 64 8
+        place template yw-pillar:cage_empty -9 64 4
+        place template yw-pillar:cage_empty 7 64 4
+        place template yw-pillar:cage_empty -9 64 -6
+        place template yw-pillar:cage_empty 7 64 -6
+        place template yw-pillar:cage_empty -1 64 -10
+
+        place template yw-pillar:cage_empty -1 64 9
+        place template yw-pillar:cage_empty -9 64 5
+        place template yw-pillar:cage_empty 7 64 5
+        place template yw-pillar:cage_empty -11 64 -3
+        place template yw-pillar:cage_empty 9 64 -3
+        place template yw-pillar:cage_empty -5 64 -10
+        place template yw-pillar:cage_empty 3 64 -10
+
+        place template yw-pillar:cage_empty -1 64 10
+        place template yw-pillar:cage_empty -9 64 7
+        place template yw-pillar:cage_empty 7 64 7
+        place template yw-pillar:cage_empty -12 64 -1
+        place template yw-pillar:cage_empty 10 64 -1
+        place template yw-pillar:cage_empty -9 64 -9
+        place template yw-pillar:cage_empty 7 64 -9
+        place template yw-pillar:cage_empty -1 64 -12

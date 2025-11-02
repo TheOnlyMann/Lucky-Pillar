@@ -1,0 +1,19 @@
+{
+    "model": {
+        "type": "select",
+        "fallback": {
+            "type": "model",
+            "model": "item/white_dye"
+        },
+        "property": "custom_model_data",
+        "cases": [
+            {
+                "when": "statistic",
+                "model": {
+                    "type": "model",
+                    "model": "yw-pillar:button/statistic"
+                }
+            }
+        ]
+    }
+}

@@ -6,10 +6,10 @@ execute if score #Timer BeginTimer matches 1 run title @a title ["",{text:"1",co
 
 execute if score #Timer BeginTimer matches 0 run title @a title ["",{text:"游戏开始",color:"#00ff1e"}]
 execute if score #Timer BeginTimer matches 0 run gamemode survival @a[tag=ready]
-$execute if score #Timer BeginTimer matches 0 run function yw-pillar:game/pillars/$(map_id)/clear_cage
-execute if score #Timer BeginTimer matches 0 run playsound entity.player.levelup master @a
+$execute if score #Timer BeginTimer matches 0 at @r[tag=ingame] run function yw-pillar:game/pillars/$(map_id)/clear_cage
+execute if score #Timer BeginTimer matches 0 as @a at @s run playsound entity.player.levelup master @s
 execute if score #Timer BeginTimer matches 0 run function yw-pillar:schedule/1s
 
-execute if score #Timer BeginTimer matches 1.. run playsound ui.button.click master @a
+execute if score #Timer BeginTimer matches 1.. as @a at @s run playsound ui.button.click master @s
 
 scoreboard players remove #Timer BeginTimer 1

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "dragon":{
+            "trigger": "summoned_entity",
+            "conditions": {
+                "entity": {
+                    "type": "ender_dragon"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/entity/dragon"
+    }
+}

@@ -33,7 +33,7 @@ place template yw-pillar:cage_empty 4 30 -12
 
 place template yw-pillar:cage_empty -1 30 11
 place template yw-pillar:cage_empty -10 30 8
-place template yw-pillar:cage_empty 8 30 7
+place template yw-pillar:cage_empty 8 30 8
 place template yw-pillar:cage_empty -13 30 -1
 place template yw-pillar:cage_empty 11 30 -1
 place template yw-pillar:cage_empty -10 30 -10

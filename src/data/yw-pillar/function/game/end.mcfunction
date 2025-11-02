@@ -27,13 +27,16 @@ gamemode adventure @a
 
 tp @a 100 3 100
 
-function yw-pillar:game/pillars/reset
+function yw-pillar:game/pillars/reset_1
 function yw-pillar:lobby/entity
-function yw-pillar:game/sidebar/lobby
 function yw-pillar:utils/player/clear_enderchest
+schedule function yw-pillar:game/sidebar/lobby 5t
 
 data modify storage yw-pillar:settings game.event_name set value ''
 
 xp set @a 0 levels
 time set day
 worldborder set 114514
+
+advancement revoke @a only yw-pillar:game/item/bow
+advancement revoke @a only yw-pillar:game/item/crossbow

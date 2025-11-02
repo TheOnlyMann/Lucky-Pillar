@@ -1,0 +1,1 @@
+execute in yw-pillar:the_end_2 run function yw-pillar:game/pillars/nether/2

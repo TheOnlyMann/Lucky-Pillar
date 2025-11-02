@@ -1,1 +1,1 @@
-execute at @s run tp @s ~ 66 ~
+effect give @a[tag=ingame,tag=!out] levitation 10 0 true

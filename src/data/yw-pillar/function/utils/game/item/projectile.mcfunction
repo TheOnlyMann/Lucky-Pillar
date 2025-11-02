@@ -1,0 +1,1 @@
+execute as @e[type=#yw-pillar:special_projectile] run function yw-pillar:utils/game/item/special_projectile with entity @s

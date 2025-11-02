@@ -1,6 +1,6 @@
 # Lucky Pillar
 
-> **Version**: 0.1.3
+> **Version**: 0.1.4
 > **Author**: 一条鱼丸_
 > **Minecraft**: 25w44a
 
@@ -18,13 +18,11 @@
 
 ### Maps
 
-#### **Classic Mode**
-- **Wool**
-
-#### **Special Mode**
-- **Ocean**:
-  - Obtain equipment and items through fishing rods
-  - Contact with water causes damage
+| Map | Description |
+|---------|----------|
+| **Wool** | Classic |
+| **Nether** | Classic |
+| **Ocean** | Special: Obtain items through fishing, water is highly toxic |
 
 ### ⚡ Random Event System
 
@@ -38,7 +36,7 @@ The following events are randomly triggered during gameplay:
 | **Wither** | Spawns Wither Boss |
 | **FLY** | Obtain elytra and fireworks rockets |
 | **Arrow Rain** | 10-second continuous arrow rain attack |
-| **Sky Walker** | Force maintain Y-axis height |
+| **Sky Walker** | Levitation |
 | **Rotation** | Players automatically rotate |
 | **Lightning Strike** | Random lightning attacks |
 

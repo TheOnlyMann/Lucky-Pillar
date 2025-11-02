@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "crossbow": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "crossbow",
+                        "predicates": {
+                            "damage": {
+                                "damage": 0
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/arrow"
+    }
+}

@@ -3,7 +3,7 @@ name: "幸运之柱"
 description: ""
 author: "一条鱼丸_"
 
-version: "0.1.3"
+version: "0.1.4"
 minecraft: "1.21"
 
 directory: "."
@@ -30,11 +30,11 @@ resource_pack:
     max_format: 1000.0
 
 pipeline:
-    - "mecha"
-    - "src.plugin.auto_lang"
-    - "script.custom_function_headers"
-    - "script.insert"
-    - "stewbeet.plugins.auto.headers"
+    - mecha
+    # - src.plugin.archive
+    - script.custom_function_headers
+    - script.insert
+    - stewbeet.plugins.auto.headers
     
     
 meta:

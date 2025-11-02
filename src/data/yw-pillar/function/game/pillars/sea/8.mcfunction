@@ -10,7 +10,7 @@ fill 0 1 -12 0 29 -12 prismarine_bricks
 
 place template yw-pillar:cage -1 30 11
 place template yw-pillar:cage -10 30 8
-place template yw-pillar:cage 8 30 7
+place template yw-pillar:cage 8 30 8
 place template yw-pillar:cage -13 30 -1
 place template yw-pillar:cage 11 30 -1
 place template yw-pillar:cage -10 30 -10

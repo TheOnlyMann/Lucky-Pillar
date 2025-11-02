@@ -1,0 +1,1 @@
+execute if score #Game MapNumber matches 3 in yw-pillar:the_nether_2 run function yw-pillar:game/pillars/nether/tp with storage yw-pillar:settings game

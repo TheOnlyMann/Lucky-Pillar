@@ -18,8 +18,8 @@ from ./lib/event import event_template
 function yw-pillar:game/event/1_night_fall:
      event_template("夜晚降临","black","黑暗里有点东西")
      time set night
-     summon phantom 0 70 0
-     summon phantom 0 70 0
+     execute at @r[tag=ingame,tag=!out] run summon phantom 0 70 0
+     execute at @r[tag=ingame,tag=!out] run summon phantom 0 70 0
 
 function yw-pillar:game/event/2_falling_anvil:
      event_template("铁砧下落","#5f665d","注意头顶！")
@@ -28,23 +28,37 @@ function yw-pillar:game/event/2_falling_anvil:
 
 function yw-pillar:game/event/3_dragon:
      event_template("龙袭","red","要结束了？")
-     summon ender_dragon 0 100 0
+     execute at @r[tag=ingame,tag=!out] run summon ender_dragon 0 100 0 {Tags:["event.3_dragon"]}
      data modify entity @e[type=ender_dragon,limit=1] DragonPhase set value 8
 
 function yw-pillar:game/event/4_wither:
      event_template("凋灵","red","§kxxxxxx")
+     execute at @r[tag=ingame,tag=!out] run summon wither 0 70 0 {Tags:["event.4_wither"]}
 
 function yw-pillar:game/event/5_fly:
      event_template("FLY","blue","\u00a7r\u00a7b自由的风")
+     give @a[tag=ingame,tag=!out] elytra
+     give @a[tag=ingame,tag=!out] firework_rocket 3
 
 function yw-pillar:game/event/6_rain/tip:
      event_template("箭雨","dark_purple","什么都有？(10s)")
+     scoreboard players set #Timer EventDura.Sec 10
+     execute as @a[tag=ingame,tag=!out] at @s run function yw-pillar:game/event/6_rain/run
 
 function yw-pillar:game/event/7_sky_waker/tip:
      event_template("踏空","aqua","\u00a7r\u00a74恐怖如斯")
+     scoreboard players set #Game EventID 7
 
 function yw-pillar:game/event/8_rotation/tip:
      event_template("自转","#1de6f0","oiiaioooooiai")
+     scoreboard players set #Game EventID 8
+     scoreboard players set #Timer EventDura.Tick 600
 
 function yw-pillar:game/event/9_lightning:
      event_template("雷击","gold","我的避雷针呢？")
+     execute as @a[tag=ingame,tag=!out] at @s run summon lightning_bolt ~ ~ ~
+
+from ./lib/pillar import pillar_tempalte
+
+pillar_tempalte("wool","bedrock")
+pillar_tempalte("nether","red_nether_bricks")

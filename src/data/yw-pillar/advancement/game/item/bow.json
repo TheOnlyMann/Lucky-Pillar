@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "bow": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "bow",
+                        "predicates": {
+                            "damage": {
+                                "damage": 0
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/arrow"
+    }
+}
