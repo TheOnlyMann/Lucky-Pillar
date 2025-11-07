@@ -2,7 +2,7 @@
 
 > **Version**: 0.1.4
 > **Author**: 一条鱼丸_
-> **Minecraft**: 25w44a
+> **Minecraft**: 25w45a
 
 ## Game Introduction
 
@@ -21,12 +21,12 @@
 | Map | Description |
 |---------|----------|
 | **Wool** | Classic |
-| **Nether** | Classic |
-| **Ocean** | Special: Obtain items through fishing, water is highly toxic |
+| **Nether** | Classic Dimension: The Nether |
+| **Ocean** | Special Obtain items through fishing, water is highly toxic |
 
 ### ⚡ Random Event System
 
-The following events are randomly triggered during gameplay:
+> The following events are randomly triggered during gameplay:
 
 | Event Name | Effect Description |
 |------------|-------------------|
@@ -39,6 +39,17 @@ The following events are randomly triggered during gameplay:
 | **Sky Walker** | Levitation |
 | **Rotation** | Players automatically rotate |
 | **Lightning Strike** | Random lightning attacks |
+| **Hello, World** | Turns to daytime, fully restores health |
+
+### Special Rules
+
+> Globally effective
+
+| Rule Name | Effect Description |
+|-----------|-------------------|
+| **Small but Cute** | All players' size reduced to 1/3 of original |
+| **Big! Big! Big!** | All players' size increased to 3/2 of original |
+| **My Partner** | Obtain a fox that provides strength and health regeneration while alive |
 
 ### Game Mechanics
 

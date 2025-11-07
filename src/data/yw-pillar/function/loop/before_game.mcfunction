@@ -22,6 +22,3 @@ execute as @a[scores={TriggerSetting.Rule=1..}] run function yw-pillar:settings/
 
 # buff
 effect give @a saturation infinite 0 true
-
-# 上一把中途退出
-function yw-pillar:utils/player/leave_halfway

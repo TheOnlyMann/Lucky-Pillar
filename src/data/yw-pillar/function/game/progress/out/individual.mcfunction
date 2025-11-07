@@ -8,6 +8,6 @@ gamemode spectator @s
 tag @s add out
 team join Out
 
-execute if score #Game MapNumber matches 3 run tp @s @r[tag=ingame,tag=!out]
+execute if score #Game MapNumber matches 3 as @s run tp @r[tag=ingame,tag=!out]
 
 execute if score #Game PlayerCount.Alive matches 1 as @a[tag=ingame,tag=!out] run function yw-pillar:game/progress/win/individual

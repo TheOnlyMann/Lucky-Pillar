@@ -5,3 +5,5 @@ function yw-pillar:test/tick
 
 # 雪球和鸡蛋
 function yw-pillar:utils/game/item/projectile
+# 重进游戏
+execute as @a[scores={LeaveGame=1..}] run function yw-pillar:utils/player/join/main

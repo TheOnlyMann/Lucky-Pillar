@@ -1,6 +1,7 @@
 $data modify storage yw-pillar:statistics temp set value {"$(UUID)":{}}
 
 $data modify storage yw-pillar:statistics temp."$(UUID)".UUID set value $(UUID)
+$execute store result storage yw-pillar:statistics temp."$(UUID)".playtime_hour int 1 run scoreboard players get @s PlayTime.Hour
 $execute store result storage yw-pillar:statistics temp."$(UUID)".playtime_min int 1 run scoreboard players get @s PlayTime.Min
 $execute store result storage yw-pillar:statistics temp."$(UUID)".playtime_sec int 1 run scoreboard players get @s PlayTime.Sec
 $execute store result storage yw-pillar:statistics temp."$(UUID)".completedcount int 1 run scoreboard players get @s CompletedCount

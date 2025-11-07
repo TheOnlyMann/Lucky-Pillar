@@ -18,7 +18,7 @@ team join InGame @a[tag=ready]
 
 clear @a
 effect clear @a
-effect give @a instant_health 5 31 true
+effect give @a instant_health 1 28 true
 
 
 execute store result score #Timer LootTimer run data get storage yw-pillar:settings time.loot_time

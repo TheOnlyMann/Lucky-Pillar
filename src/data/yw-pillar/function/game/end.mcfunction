@@ -22,20 +22,19 @@ team join Ready @a[tag=ready]
 
 clear @a
 effect clear @a
-
 gamemode adventure @a
-
 tp @a 100 3 100
+spawnpoint @a 100 3 100
 
 function yw-pillar:game/pillars/reset_1
 function yw-pillar:lobby/entity
 function yw-pillar:utils/player/reset/enderchest
+function yw-pillar:utils/player/reset/xp
 execute as @a run function yw-pillar:utils/player/reset/attritube
 schedule function yw-pillar:game/sidebar/lobby 3t
 
 data modify storage yw-pillar:settings game.event_name set value ''
 
-xp set @a 0 levels
 time set day
 worldborder set 114514
 

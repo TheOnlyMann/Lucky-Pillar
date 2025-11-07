@@ -59,7 +59,7 @@ function yw-pillar:game/event/9_lightning:
 function yw-pillar:game/event/10_hello_world:
      event_template("你好,世界","green","Hello World!")
      time set day
-     execute as @a[tag=ingame,tag=!out] run effect give @s instant_health 5 31 true
+     execute as @a[tag=ingame,tag=!out] run effect give @s instant_health 1 28 true
 
 # 规则
 from ./lib/rule import rule_template
@@ -74,7 +74,9 @@ function yw-pillar:game/rule/2_big:
 function yw-pillar:game/rule/3_my_partner/tip:
      rule_template("我的伙伴","blue",-48357795,"获得一只 §l狐狸\n  狐狸存活时,给玩家提供力量和生命回复")
      execute as @a[tag=ingame,tag=!out] run function yw-pillar:utils/rule/fox_give with entity @s
-
+function yw-pillar:game/rule/3_one_hit_kill:
+     rule_template("一击必杀！","red",-38896125,"所有玩家尺寸增大为原来的 §l3/2")
+     execute as @a[tag=ingame,tag=!out] run attribute @s scale base set 1.5
 
 # 柱
 from ./lib/pillar import pillar_tempalte
