@@ -66,6 +66,9 @@ function ./game/event/14_creeper:
      event_template("CREEPER","white","Creeper?")
      execute as @a[tag=ingame,tag=!out] at @s if predicate {condition:"random_chance",chance:0.1} run return run summon creeper ~ ~0.5 ~ {Silent:true,powered:true}
      execute as @a[tag=ingame,tag=!out] at @s run summon creeper ~ ~0.5 ~
+function ./game/event/15_touch:
+     event_template("摸摸","#e315c8","OvO")
+     execute as @a[tag=ingame,tag=!out] run attribute @s entity_interaction_range base set 10
 
 # 规则
 from ./lib/rule import rule_template
@@ -88,3 +91,4 @@ from ./lib/pillar import pillar_tempalte
 
 pillar_tempalte("wool","bedrock")
 pillar_tempalte("nether","red_nether_bricks")
+pillar_tempalte("glass","glass")

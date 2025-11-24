@@ -17,6 +17,7 @@ execute if score #Game EventID matches 11 run function yw-pillar:game/event/11_u
 execute if score #Game EventID matches 12 run function yw-pillar:game/event/12_broken_leg
 execute if score #Game EventID matches 13 run function yw-pillar:game/event/13_punch
 execute if score #Game EventID matches 14 run function yw-pillar:game/event/14_creeper
+execute if score #Game EventID matches 15 run function yw-pillar:game/event/15_touch
 
 execute store result score #Timer EventTimer run data get storage yw-pillar:settings time.event_time
 

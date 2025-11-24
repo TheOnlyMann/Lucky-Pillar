@@ -36,8 +36,8 @@
     "yw-pillar.function.init.2": "[准备]",
     "yw-pillar.function.init.3": "旁观",
     "yw-pillar.function.init.4": "[旁观]",
-    "yw-pillar.function.init.5": "游戏中",
-    "yw-pillar.function.init.6": "[游戏中]",
+    "yw-pillar.function.init.5": "⚔",
+    "yw-pillar.function.init.6": "[⚔]",
     "yw-pillar.function.init.7": "寄了",
     "yw-pillar.function.init.8": "[寄了]",
     "yw-pillar.function.init.9": "[Tips]",
@@ -169,5 +169,5 @@
     "yw-pillar.function.utils.player.statistic.send_chat.2.8": "=——------——--——----——--————=",
     "yw-pillar.function.utils.rule.fox_give.1": "的狐狐",
     "yw-pillar.function.utils.rule.fox_give.2": "右键召唤狐狐",
-    "yw-pillar.sound.fail_start":"开始失败"
+    "yw-pillar.sound.fail_start":"游戏开始失败"
 }

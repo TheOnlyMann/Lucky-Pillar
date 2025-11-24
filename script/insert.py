@@ -26,6 +26,6 @@ data modify storage yw-pillar:system info set value \
     release_time:"{time.strftime("%Y.%m.%d")}"\
 }}
     """
-    function.lines.insert(20, insert_thing)
+    function.lines.insert(9, insert_thing)
 
     ctx.data.filter["block"].append({"namespace": "minecraft","path":"advancement"})

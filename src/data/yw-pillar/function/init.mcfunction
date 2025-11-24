@@ -21,18 +21,18 @@ data modify storage yw-pillar:settings time set value \
 # 游戏
 
 
-team add Ready {text:"准备"}
+team add Ready {text:"✅"}
 team modify Ready color green
-team modify Ready prefix {text:"[准备]",color:"green"}
-team add Spectator {text:"旁观"}
+team modify Ready prefix {text:"[✅]",color:"green"}
+team add Spectator {text:"\ud83d\udc41"}
 team modify Spectator color gray
-team modify Spectator prefix {text:"[旁观]",color:"gray"}
-team add InGame {text:"游戏中"}
+team modify Spectator prefix {text:"[\ud83d\udc41]",color:"gray"}
+team add InGame {text:"⚔"}
 team modify InGame color green
-team modify InGame prefix {text:"[游戏中]",color:"green"}
-team add Out {text:"寄了"}
+team modify InGame prefix {text:"[⚔]",color:"green"}
+team add Out {text:"☠"}
 team modify Out color red
-team modify Out prefix {text:"[寄了]",color:"red"}
+team modify Out prefix {text:"[☠]",color:"red"}
 
 gamerule spawn_phantoms false
 gamerule spawn_mobs false

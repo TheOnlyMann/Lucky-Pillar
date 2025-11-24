@@ -1,3 +1,6 @@
+# 开发者
+execute if score #Game Dev matches 1 run return run tellraw @a ["",{text:"[Error]",color:"red",bold:true},{color:"gold",text:"当前处于开发者模式..."},{color:"gold",text:"无法开始游戏"}]
+execute if score #Game Dev matches 1 run playsound yw-pillar:fail_start
 # 游戏进行中
 execute if score #Game GameStatus matches 1 run playsound yw-pillar:fail_start
 execute if score #Game GameStatus matches 1 run return run tellraw @a ["",{text:"[Error]",color:"red",bold:true},{color:"gold",text:"游戏进行中..."},{color:"gold",text:"无法开始游戏"}]

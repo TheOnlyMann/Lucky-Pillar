@@ -74,6 +74,19 @@
                 "type": "run_command",
                 "command": "trigger TriggerSetting.Map set 3"
             }
+        },
+        {
+            "label": {
+                "text": "玻璃",
+                "color": "#797e7c"
+            },
+            "tooltip": {
+                "text": "经典模式"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.Map set 4"
+            }
         }
     ],
     "exit_action": {

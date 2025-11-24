@@ -2,7 +2,6 @@ advancement revoke @s only yw-pillar:lobby/play_button
 
 execute if function yw-pillar:utils/game/check run return fail
 
-playsound ui.button.click master @s
 scoreboard players set #Game GameStatus 1
 scoreboard players add #Game GameID 1
 scoreboard players operation @a GameID = #Game GameID

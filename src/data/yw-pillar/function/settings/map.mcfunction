@@ -2,6 +2,7 @@ tellraw @a ["","\n\n\n\n=-------------------------=\n",{text:"[Tips]",color:"gol
 execute if score @s TriggerSetting.Map matches 1 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"羊毛",color:"green"}]
 execute if score @s TriggerSetting.Map matches 2 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"海洋",color:"green"}]
 execute if score @s TriggerSetting.Map matches 3 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"地狱",color:"green"}]
+execute if score @s TriggerSetting.Map matches 4 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"玻璃",color:"green"}]
 tellraw @a "\n=-------------------------="
 
 
@@ -14,6 +15,9 @@ tellraw @a "\n=-------------------------="
 # 地狱
     execute if score @s TriggerSetting.Map matches 3 run data modify storage yw-pillar:settings game merge value {previous:2,current:3,next:3,map_name:"地狱",map_id:nether}
     execute if score @s TriggerSetting.Map matches 3 run function aj:pillar/nether
+# 玻璃
+    execute if score @s TriggerSetting.Map matches 4 run data modify storage yw-pillar:settings game merge value {previous:3,current:4,next:4,map_name:"玻璃",map_id:glass}
+    execute if score @s TriggerSetting.Map matches 4 run function aj:pillar/wool
 
 function yw-pillar:dialog/settings/menu with storage yw-pillar:settings game
 scoreboard players set @s TriggerSetting.Map 0

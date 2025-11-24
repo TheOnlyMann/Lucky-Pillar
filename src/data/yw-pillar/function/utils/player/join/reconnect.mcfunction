@@ -5,6 +5,7 @@ execute as @s[tag=ingame,tag=!out] if score #Game GameStatus matches 1 run tellr
 execute as @s[tag=ingame] if score #Game GameStatus matches 0 run function yw-pillar:utils/player/join/before_game
 
 execute as @s[tag=out] if score #Game GameStatus matches 1 run gamemode spectator @s
+execute as @s[tag=out] if score #Game GameStatus matches 1 run tp @s @r[tag=ingame,tag=!out]
 
 execute as @s[tag=spectator] if score #Game GameStatus matches 1 run tp @s @r[tag=ingame,tag=!out]
 execute as @s[tag=spectator] if score #Game GameStatus matches 0 run function yw-pillar:utils/player/join/before_game

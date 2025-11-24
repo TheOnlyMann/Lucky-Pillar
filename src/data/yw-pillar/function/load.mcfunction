@@ -1,5 +1,6 @@
 ## Game
 scoreboard objectives add Init dummy
+scoreboard objectives add Dev dummy
 scoreboard objectives add GameStatus dummy
 scoreboard objectives add GameMode dummy
 scoreboard objectives add GameID dummy

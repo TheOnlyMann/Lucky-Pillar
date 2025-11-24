@@ -53,7 +53,7 @@
     "yw-pillar.function.dialog.player.statistic.3.8": "Confirm",
     "yw-pillar.function.dialog.player.statistic.3.9": "Send to Chat",
     "yw-pillar.function.dialog.settings.menu.1": " | Main Menu",
-    "yw-pillar.function.dialog.settings.menu.2": "Author:",
+    "yw-pillar.function.dialog.settings.menu.2": "Creator:",
     "yw-pillar.function.dialog.settings.menu.3": "",
     "yw-pillar.function.dialog.settings.menu.4": "一",
     "yw-pillar.function.dialog.settings.menu.5": "条",
@@ -151,7 +151,7 @@
     "yw-pillar.function.utils.pillar.cage.2": "4",
     "yw-pillar.function.utils.pillar.cage.3": "3",
     "yw-pillar.function.utils.pillar.cage.4": "1",
-    "yw-pillar.function.utils.pillar.cage.5": "Game Start",
+    "yw-pillar.function.utils.pillar.cage.5": "Start Game",
     "yw-pillar.function.utils.player.nametag.1": "哈",
     "yw-pillar.function.utils.player.nametag.2": "基",
     "yw-pillar.function.utils.player.nametag.3": "鱼丸2号机",
@@ -168,5 +168,6 @@
     "yw-pillar.function.utils.player.statistic.send_chat.2.7": "                    Deaths:",
     "yw-pillar.function.utils.player.statistic.send_chat.2.8": "=——------——--——----——--————=",
     "yw-pillar.function.utils.rule.fox_give.1": "'s Foxy",
-    "yw-pillar.function.utils.rule.fox_give.2": "Right-click to summon fox"
+    "yw-pillar.function.utils.rule.fox_give.2": "Right-click to summon fox",
+    "yw-pillar.sound.fail_start":"Fail to start"
 }
