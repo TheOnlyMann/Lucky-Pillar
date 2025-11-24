@@ -1,0 +1,62 @@
+name: Create Release on Push
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Set PYO3_USE_ABI3_FORWARD_COMPATIBILITY
+        run: echo "PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1" >> $GITHUB_ENV
+
+      - name: Install dependencies
+        run: |
+          pip install beet bolt mecha stewbeet
+
+      - name: Get version from beet.yaml
+        id: get_version
+        run: |
+          BEET_VERSION=$(python -c "import yaml; print(yaml.safe_load(open('beet.yaml'))['version'])")
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          RELEASE_VERSION="${BEET_VERSION}-${TIMESTAMP}"
+          echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
+
+      - name: Build project
+        run: beet build
+
+      - name: Archive build artifacts
+        run: |
+          zip -r yw-pillar-datapack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip build/yw-pillar-datapack
+          zip -r yw-pillar-resourcepack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip build/yw-pillar-resourcepack
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get_version.outputs.RELEASE_VERSION }}
+          name: Release v${{ steps.get_version.outputs.RELEASE_VERSION }}
+          body: Automated release based on beet.yaml version and timestamp.
+          files: |
+            yw-pillar-datapack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip
+            yw-pillar-resourcepack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
