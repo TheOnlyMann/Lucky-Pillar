@@ -11,6 +11,6 @@ gamemode spectator @s
 tag @s add out
 team join Out
 
-execute if score #Game MapNumber matches 3 run schedule function yw-pillar:game/pillars/nether/dead 10t
+execute if score #Game MapNumber matches 102 run schedule function yw-pillar:game/pillars/nether/dead 10t
 
 execute if score #Game PlayerCount.Alive matches 1 as @a[tag=ingame,tag=!out] run function yw-pillar:game/progress/win/individual

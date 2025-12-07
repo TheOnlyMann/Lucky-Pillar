@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "model",
-        "model": "yw-pillar:logo"
+        "model": "yw-pillar:lobby/bug"
     }
 }

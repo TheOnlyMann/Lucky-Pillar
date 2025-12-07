@@ -1,6 +1,0 @@
-{
-    "parent": "yw-pillar:button/ready",
-    "textures": {
-        "layer0":"yw-pillar:item/button/unready"
-    }
-}

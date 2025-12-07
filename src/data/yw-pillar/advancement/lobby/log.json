@@ -1,18 +1,18 @@
 {
     "criteria": {
-        "spectator":{
-            "trigger": "using_item",
+        "log": {
+            "trigger": "consume_item",
             "conditions": {
                 "item": {
                     "items": "white_dye",
                     "components": {
-                        "item_model": "yw-pillar:lobby/ready"
+                        "item_model": "yw-pillar:lobby/log"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "yw-pillar:lobby/spectator"
+        "function": "yw-pillar:game/log/show"
     }
 }

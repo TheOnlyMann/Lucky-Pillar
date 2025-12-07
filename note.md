@@ -21,6 +21,13 @@
 - [传送到地图](./src/data/yw-pillar/function/game/pillars/)  <map_id>/tp.mcfunction 
 - [掉虚空](./src/data/yw-pillar/function/game/pillars/location.mcfunction)
 
+| 地图 | 描述 |
+|---------|----------|
+| 101 羊毛 | 经典 |
+| 102 地狱 | 经典 维度：下界 |
+| 103 玻璃 | 经典 |
+| 201 海洋 | 特殊 通过钓鱼获得物品，水有剧毒 | 
+ 
 ## 随机事件
 
 每 s 触发 `yw-pillar:game/event/duration_sec`  

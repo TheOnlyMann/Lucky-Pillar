@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [1024, 1024],
 	"textures": {
-		"1": "yw-pillar:item/logo/lucky_pillar",
-		"2": "yw-pillar:item/logo/empty",
-		"particle": "yw-pillar:item/logo/empty"
+		"1": "yw-pillar:item/lobby/logo/lucky_pillar",
+		"2": "yw-pillar:item/lobby/logo/empty",
+		"particle": "yw-pillar:item/lobby/logo/empty"
 	},
 	"elements": [
 		{

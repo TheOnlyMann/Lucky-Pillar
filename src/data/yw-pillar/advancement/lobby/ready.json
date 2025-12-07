@@ -4,11 +4,9 @@
             "trigger": "using_item",
             "conditions": {
                 "item": {
-                    "items": "red_dye",
+                    "items": "white_dye",
                     "components": {
-                        "custom_model_data": {
-                            "strings": ["spectator"]
-                        }
+                        "item_model": "yw-pillar:lobby/spectator"
                     }
                 }
             }

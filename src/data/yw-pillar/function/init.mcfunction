@@ -1,7 +1,7 @@
 scoreboard players set #Game Init 1
 scoreboard players set #Game GameStatus 0
 scoreboard players set #Game GameMode 0
-scoreboard players set #Game MapNumber 1
+scoreboard players set #Game MapNumber 101
 
 scoreboard players set #Timer LootTimer 5
 scoreboard players set #Timer EventTimer 60

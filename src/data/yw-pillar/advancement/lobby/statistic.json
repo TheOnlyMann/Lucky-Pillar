@@ -6,11 +6,7 @@
                 "item": {
                     "items": "white_dye",
                     "components": {
-                        "custom_model_data": {
-                            "strings": [
-                                "statistic"
-                            ]
-                        }
+                        "item_model": "yw-pillar:lobby/statistic"
                     }
                 }
             }

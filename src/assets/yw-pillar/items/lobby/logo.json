@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "model",
-        "model": "yw-pillar:button/play"
+        "model": "yw-pillar:lobby/logo"
     }
 }

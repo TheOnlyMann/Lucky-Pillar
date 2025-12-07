@@ -33,7 +33,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger TriggerSetting.Map set 1"
+                "command": "trigger TriggerSetting.Map set 101"
             }
         },
         {
@@ -54,7 +54,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger TriggerSetting.Map set 2"
+                "command": "trigger TriggerSetting.Map set 201"
             }
         },
         {
@@ -72,7 +72,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger TriggerSetting.Map set 3"
+                "command": "trigger TriggerSetting.Map set 102"
             }
         },
         {
@@ -85,7 +85,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "trigger TriggerSetting.Map set 4"
+                "command": "trigger TriggerSetting.Map set 103"
             }
         }
     ],

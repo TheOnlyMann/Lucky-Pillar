@@ -3,9 +3,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "yw-pillar:item/social/bilibili",
-		"4": "yw-pillar:item/social/base",
-		"particle": "yw-pillar:item/social/base"
+		"2": "yw-pillar:item/lobby/bilibili",
+		"4": "yw-pillar:item/lobby/base",
+		"particle": "yw-pillar:item/lobby/base"
 	},
 	"elements": [
 		{

@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "model",
-        "model": "yw-pillar:bili"
+        "model": "yw-pillar:lobby/play"
     }
 }

@@ -1,6 +1,6 @@
 {
     "model": {
         "type": "model",
-        "model": "yw-pillar:qq"
+        "model": "yw-pillar:lobby/qq"
     }
 }
