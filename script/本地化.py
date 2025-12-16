@@ -14,8 +14,11 @@ def should_escape_char(char):
 
 
 async def traverse_and_replace_texts(
-    directory, translations, number, output_file_name="zh_cn.json"
+    directory, translations, output_file_name="zh_cn.json"
 ):
+    # 为每个JSON文件维护单独的计数器，类似mcfunction的处理方式
+    namespace_counts = {}
+
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.endswith(".json"):
@@ -33,6 +36,10 @@ async def traverse_and_replace_texts(
                 # 格式化翻译键前缀
                 key_prefix = format_json_translation_key(key_prefix)
 
+                # 初始化当前文件/key_prefix的计数器
+                if key_prefix not in namespace_counts:
+                    namespace_counts[key_prefix] = 1
+
                 try:
                     with open(file_path, "r", encoding="utf-8") as f:
                         data = json.load(f)
@@ -40,7 +47,9 @@ async def traverse_and_replace_texts(
                     print(f"正在处理JSON文件: {file_path}")
 
                     # 新的data对象
-                    new_data = replace_text(data, translations, number, key_prefix)
+                    new_data = replace_text(
+                        data, translations, namespace_counts, key_prefix
+                    )
 
                     # 写入标准JSON编码，并处理私有使用区域字符
                     json_str = json.dumps(new_data, ensure_ascii=False, indent=4)
@@ -59,7 +68,7 @@ async def traverse_and_replace_texts(
     output_file_path = os.path.join(script_dir, output_file_name)
 
     json_str = json.dumps(translations, ensure_ascii=False, indent=4)
-    with open(output_file_path, "w", encoding="utf-8", errors='replace') as out_file:
+    with open(output_file_path, "w", encoding="utf-8", errors="replace") as out_file:
         out_file.write(json_str)
 
     print(f"JSON翻译结果已保存至: {output_file_path}")
@@ -80,7 +89,7 @@ def format_json_translation_key(key):
     return key
 
 
-def replace_text(data, translations, number, key_prefix):
+def replace_text(data, translations, namespace_counts, key_prefix):
     """
     修正版：递归处理所有dict对象中所有text字段，无论嵌套层级，并且处理extra、with、hoverEvent.value等通用文本嵌套结构。
     跳过包含 $( 的内容。
@@ -91,27 +100,36 @@ def replace_text(data, translations, number, key_prefix):
         new_data = {}
         for key, value in data.items():
             # Minecraft JSON文本常用嵌套字段
-            if key in ('extra', 'with') and isinstance(value, list):
-                new_data[key] = [replace_text(v, translations, number, key_prefix) for v in value]
+            if key in ("extra", "with") and isinstance(value, list):
+                new_data[key] = [
+                    replace_text(v, translations, namespace_counts, key_prefix)
+                    for v in value
+                ]
             # hoverEvent.value 也常是数组/字典
             elif key == "hoverEvent" and isinstance(value, dict):
                 # hoverEvent.value 可能为dict或list
-                if 'value' in value:
+                if "value" in value:
                     # 递归处理
                     value_copy = value.copy()
-                    value_copy['value'] = replace_text(value['value'], translations, number, key_prefix)
+                    value_copy["value"] = replace_text(
+                        value["value"], translations, namespace_counts, key_prefix
+                    )
                     new_data[key] = value_copy
                 else:
-                    new_data[key] = replace_text(value, translations, number, key_prefix)
+                    new_data[key] = replace_text(
+                        value, translations, namespace_counts, key_prefix
+                    )
             elif isinstance(value, (dict, list)):
-                new_data[key] = replace_text(value, translations, number, key_prefix)
+                new_data[key] = replace_text(
+                    value, translations, namespace_counts, key_prefix
+                )
             else:
                 new_data[key] = value
 
         # 只在本dict存在 "text" 且为字符串时替换
         if "text" in data and isinstance(data["text"], str):
             original_text = data["text"]
-            
+
             # 跳过包含 $( 的内容
             if "$(" in original_text:
                 print(f"跳过包含 '$(' 的文本: '{original_text}'")
@@ -132,11 +150,13 @@ def replace_text(data, translations, number, key_prefix):
                     )
                     translations[translation_key] = original_text
             else:
-                translation_key = f"{key_prefix}.{number[0]}"
+                # 使用当前key_prefix的计数器，类似mcfunction的处理方式
+                current_count = namespace_counts[key_prefix]
+                translation_key = f"{key_prefix}.{current_count}"
                 translation_key = format_json_translation_key(translation_key)
                 translation_key = format_translation_key(translation_key)
                 translations[translation_key] = original_text
-                number[0] += 1
+                namespace_counts[key_prefix] += 1
 
             # 替换text字段
             new_data.pop("text", None)
@@ -146,69 +166,10 @@ def replace_text(data, translations, number, key_prefix):
         return new_data
 
     elif isinstance(data, list):
-        return [replace_text(item, translations, number, key_prefix) for item in data]
-    else:
-        return data
-    """
-    修正版：递归处理所有dict对象中所有text字段，无论嵌套层级，并且处理extra、with、hoverEvent.value等通用文本嵌套结构。
-    """
-    if isinstance(data, dict):
-        # 先递归处理所有 key
-        # 注意需要先把extra, with等特殊文本子项递归处理
-        new_data = {}
-        for key, value in data.items():
-            # Minecraft JSON文本常用嵌套字段
-            if key in ('extra', 'with') and isinstance(value, list):
-                new_data[key] = [replace_text(v, translations, number, key_prefix) for v in value]
-            # hoverEvent.value 也常是数组/字典
-            elif key == "hoverEvent" and isinstance(value, dict):
-                # hoverEvent.value 可能为dict或list
-                if 'value' in value:
-                    # 递归处理
-                    value_copy = value.copy()
-                    value_copy['value'] = replace_text(value['value'], translations, number, key_prefix)
-                    new_data[key] = value_copy
-                else:
-                    new_data[key] = replace_text(value, translations, number, key_prefix)
-            elif isinstance(value, (dict, list)):
-                new_data[key] = replace_text(value, translations, number, key_prefix)
-            else:
-                new_data[key] = value
-
-        # 只在本dict存在 "text" 且为字符串时替换
-        if "text" in data and isinstance(data["text"], str):
-            original_text = data["text"]
-
-            # 查找是否已有相同文本的翻译键
-            existing_key = None
-            for trans_key, trans_value in translations.items():
-                if trans_value == original_text:
-                    existing_key = trans_key
-                    break
-
-            if existing_key:
-                translation_key = existing_key
-                if translations[translation_key] != original_text:
-                    print(
-                        f"更新翻译键 {translation_key}: '{translations[translation_key]}' -> '{original_text}'"
-                    )
-                    translations[translation_key] = original_text
-            else:
-                translation_key = f"{key_prefix}.{number[0]}"
-                translation_key = format_json_translation_key(translation_key)
-                translation_key = format_translation_key(translation_key)
-                translations[translation_key] = original_text
-                number[0] += 1
-
-            # 替换text字段
-            new_data.pop("text", None)
-            new_data["translate"] = translation_key
-            new_data["fallback"] = original_text
-
-        return new_data
-
-    elif isinstance(data, list):
-        return [replace_text(item, translations, number, key_prefix) for item in data]
+        return [
+            replace_text(item, translations, namespace_counts, key_prefix)
+            for item in data
+        ]
     else:
         return data
 
@@ -220,11 +181,11 @@ def extract_quoted_text(text, start_pos, quote_char):
     while i < len(text):
         char = text[i]
 
-        if char == '\\' and i + 1 < len(text):
+        if char == "\\" and i + 1 < len(text):
             next_char = text[i + 1]
-            if next_char == 'u' and i + 5 < len(text):
+            if next_char == "u" and i + 5 < len(text):
                 try:
-                    hex_code = text[i+2:i+6]
+                    hex_code = text[i + 2 : i + 6]
                     unicode_char = chr(int(hex_code, 16))
                     result.append(unicode_char)
                     i += 6
@@ -234,23 +195,23 @@ def extract_quoted_text(text, start_pos, quote_char):
             elif next_char == quote_char:
                 result.append(quote_char)
                 i += 2
-            elif next_char == '\\':
-                result.append('\\')
+            elif next_char == "\\":
+                result.append("\\")
                 i += 2
-            elif next_char == 'n':
-                result.append('\n')
+            elif next_char == "n":
+                result.append("\n")
                 i += 2
-            elif next_char == 't':
-                result.append('\t')
+            elif next_char == "t":
+                result.append("\t")
                 i += 2
-            elif next_char == 'r':
-                result.append('\r')
+            elif next_char == "r":
+                result.append("\r")
                 i += 2
             else:
                 result.append(next_char)
                 i += 2
         elif char == quote_char:
-            return ''.join(result), i
+            return "".join(result), i
         else:
             result.append(char)
             i += 1
@@ -264,18 +225,18 @@ def escape_for_mcfunction(text, quote_char):
         if should_escape_char(char):
             result.append(f"\\u{ord(char):04x}")
         elif char == quote_char:
-            result.append('\\' + quote_char)
-        elif char == '\\':
-            result.append('\\\\')
-        elif char == '\n':
-            result.append('\\n')
-        elif char == '\t':
-            result.append('\\t')
-        elif char == '\r':
-            result.append('\\r')
+            result.append("\\" + quote_char)
+        elif char == "\\":
+            result.append("\\\\")
+        elif char == "\n":
+            result.append("\\n")
+        elif char == "\t":
+            result.append("\\t")
+        elif char == "\r":
+            result.append("\\r")
         else:
             result.append(char)
-    return ''.join(result)
+    return "".join(result)
 
 
 async def localize_mcfunction(directory, translations, output_file_name="zh_cn.json"):
@@ -311,10 +272,14 @@ async def localize_mcfunction(directory, translations, output_file_name="zh_cn.j
 
                     for translate_match in translate_matches:
                         translation_key = translate_match.group(2)
-                        fallback_match = fallback_pattern.search(content, translate_match.end())
+                        fallback_match = fallback_pattern.search(
+                            content, translate_match.end()
+                        )
                         if fallback_match:
                             quote_char = fallback_match.group(1)
-                            fallback_text, _ = extract_quoted_text(content, fallback_match.end(), quote_char)
+                            fallback_text, _ = extract_quoted_text(
+                                content, fallback_match.end(), quote_char
+                            )
                             if fallback_text and translation_key in translations:
                                 if translations[translation_key] != fallback_text:
                                     print(
@@ -373,14 +338,17 @@ async def localize_mcfunction(directory, translations, output_file_name="zh_cn.j
                         new_content = (
                             new_content[:start] + replacement + new_content[end:]
                         )
-                        offset += len(replacement) - (original_match_end - original_match_start)
+                        offset += len(replacement) - (
+                            original_match_end - original_match_start
+                        )
 
-                    with open(file_path, "w", encoding="utf-8") as f:
+                    with open(file_path, "w", encoding="utf-8", errors="replace") as f:
                         f.write(new_content)
 
                 except Exception as e:
                     print(f"处理mcfunction文件 {file_path} 时出错: {e}")
                     import traceback
+
                     traceback.print_exc()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -388,21 +356,24 @@ async def localize_mcfunction(directory, translations, output_file_name="zh_cn.j
 
     if translations:
         json_str = json.dumps(translations, ensure_ascii=False, indent=4)
-        with open(output_file_path, "w", encoding="utf-8", errors='replace') as out_file:
+        with open(
+            output_file_path, "w", encoding="utf-8", errors="replace"
+        ) as out_file:
             out_file.write(json_str)
 
-        print(f"mcfunction翻译结果已保存至: {output_file_path}")
+        print(f"翻译结果已保存至: {output_file_path}")
     else:
-        print("未找到mcfunction翻译键。")
+        print("未找到翻译键。")
 
 
 async def main():
-    directory = input("请输入要遍历的目录路径：")
+    directory = "../build/yw-pillar-datapack"
     translations = {}
     number = [1]
 
     # 读取翻译文件
     script_dir = os.path.dirname(os.path.abspath(__file__))
+
     zh_cn_file_path = os.path.join(script_dir, "zh_cn.json")
 
     if os.path.exists(zh_cn_file_path):
@@ -413,10 +384,8 @@ async def main():
         except Exception as e:
             print(f"加载现有翻译文件时出错: {e}")
             translations = {}
-    else:
-        print("未找到现有翻译文件，将创建新文件")
 
-    await traverse_and_replace_texts(directory, translations, number)
+    await traverse_and_replace_texts(directory, translations)
     await localize_mcfunction(directory, translations)
 
 
