@@ -1,5 +1,6 @@
 import nbtlib
 
+# 存储背包
 append function yw-pillar:utils/player/store_inv:
     # 传入 as @s at @s
     summon chest_minecart ~ ~ ~ {Tags:["store_inv"]}
@@ -15,3 +16,11 @@ append function yw-pillar:utils/player/store_inv:
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.11 from entity @s armor.legs
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.12 from entity @s armor.feet
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.13 from entity @s weapon.offhand
+    
+# 分配编号
+def number():
+    for i in range(2,13):
+        function f'yw-pillar:utils/player/number/{i}':
+          for n in range(1,i+1):
+             execute as @r[tag=ready,scores={Number=0}] run scoreboard players set @s Number n
+number()

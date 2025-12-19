@@ -2,7 +2,7 @@
 
 # Lucky Pillar
 
-> **Version**: 0.1.5
+> **Version**: 0.1.6
 > **Creator**: 一条鱼丸_
 > **Minecraft**: 1.21.11
 
@@ -12,7 +12,7 @@
 
 ### Core Gameplay
 
-- **Multiplayer Competition**: Supports 2-8 players competing simultaneously
+- **Multiplayer Competition**: Supports 2-12 players competing simultaneously
 - **Random Items**: Receive different weapons and items randomly each round
 - **Dynamic Events**: Various random events triggered during gameplay
 - **Survival Challenge**: Survive on limited platforms and defeat opponents
@@ -29,7 +29,7 @@
 | **Glass** | Classic |
 | **Ocean** | Special Obtain items through fishing, water is highly toxic |
 
-### ⚡ Random Event System
+### Random Event System
 
 > The following events are randomly triggered during gameplay:
 
@@ -52,7 +52,7 @@
 | **Pat Pat** | Player entity interaction distance becomes 10 |
 | **Inventory Exchange** | Players' inventory items are randomly exchanged |
 | **King Game** | Winner takes all |
-| **Lucky Doll** | Obtain a doll |
+| **Lucky Doll** | Obtain an enhanced totem of undying |
 
 ### Special Rules
 
@@ -79,3 +79,13 @@
 | ----------- | ----------- |
 | `function yw-pillar:game/end` | End the game directly |
 | `function yw-pillar:utils/game/remove_one_player`   | Handling a player leaving midway |
+| `function yw-pillar:utils/game/skip_event`   | Skip current event |
+
+### server.properties
+
+```properties
+difficulty=hard
+motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.5§r\n§2作者：§r§b§l§n一条鱼丸_
+resource-pack=https://gh-proxy.com/https://github.com/YuWan886/YuWan-Server/releases/download/pack/1.21.11-Lucky-Pillar.zip
+spawn-protection=0
+```

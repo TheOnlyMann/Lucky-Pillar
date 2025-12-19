@@ -2,7 +2,8 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "yw-pillar:item/doll/fishing886_"
+		"2": "yw-pillar:item/doll/fishing886_",
+		"particle":"yw-pillar:item/doll/fishing886_"
 	},
 	"elements": [
 		{

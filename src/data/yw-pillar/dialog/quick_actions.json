@@ -5,7 +5,9 @@
     "actions": [
         {
             "label": {
-                "text": "地图介绍"
+                "text": "地图介绍",
+                "color": "aqua",
+                "underlined": true
             },
             "action": {
                 "type": "open_url",
@@ -23,11 +25,22 @@
         },
         {
             "label": {
-                "text": "反馈BUG"
+                "text": "反馈BUG",
+                "color": "aqua",
+                "underlined": true
             },
             "action": {
                 "type": "open_url",
                 "url": "https://docs.qq.com/smartsheet/DUUt2UHZvS2RpaUtC?tab=BB08J2"
+            }
+        },
+        {
+            "label": {
+                "text": "OP 指令"
+            },
+            "action": {
+                "type": "show_dialog",
+                "dialog": "yw-pillar:op_command"
             }
         },
         {

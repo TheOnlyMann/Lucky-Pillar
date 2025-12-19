@@ -1,18 +1,3 @@
-# append function ./3:
-#     for i in range(4):
-#         tellraw @a {text:f"{i}"}
-
-# function ./4:
-#     tellraw @a {text:"hi"}
-    
-
-# def event(name,desc):
-#     tellraw @a {text:f"是：{name}"}
-#     title @a subtitle {text:f"{desc}！"}
-
-# function ./5: 
-#     event("superman","oVo")
-
 # 事件 
 from ./lib/event import event_template
 
@@ -43,8 +28,8 @@ function ./game/event/6_rain/tip:
 function ./game/event/7_sky_waker/tip:
      event_template("踏空","aqua","\u00a7r\u00a74恐怖如斯")
 function ./game/event/8_rotation/tip:
-     event_template("自转","#1de6f0","oiiaioooooiai(30s)")
-     scoreboard players set #Timer EventDura.Tick 600
+     event_template("自转","#1de6f0","oiiaioooooiai(10s)")
+     scoreboard players set #Timer EventDura.Tick 200
 function ./game/event/9_lightning:
      event_template("雷击","gold","我的避雷针呢？")
      execute as @a[tag=ingame,tag=!out] at @s run summon lightning_bolt ~ ~ ~
@@ -57,7 +42,7 @@ function ./game/event/11_undye:
      execute as @a[tag=ingame,tag=!out] run give @s totem_of_undying 1
 function ./game/event/12_broken_leg:
      event_template("断腿","red","")
-     execute as @a[tag=ingame,tag=!out] run attribute @s jump_strength base set 0
+     execute as @a[tag=ingame,tag=!out] run attribute @s jump_strength modifier add yw-pillar:event.broken_leg -0.5 add_value
 function ./game/event/13_punch:
      execute if score #Game RuleID matches 3 run return run function yw-pillar:game/event/main
      event_template("一击必杀","yellow","ONE PUNCH!!!")
@@ -68,7 +53,7 @@ function ./game/event/14_creeper:
      execute as @a[tag=ingame,tag=!out] at @s run summon creeper ~ ~0.5 ~
 function ./game/event/15_touch:
      event_template("摸摸","#e315c8","OvO")
-     execute as @a[tag=ingame,tag=!out] run attribute @s entity_interaction_range base set 10
+     execute as @a[tag=ingame,tag=!out] run attribute @s entity_interaction_range modifier add yw-pillar:event.pat_pat 10 add_value
 function ./game/event/16_inv_exchange:
      event_template("背包交换","green","这何尝不是一种NTR")
      function yw-pillar:utils/event/inv_exchange/run
@@ -80,7 +65,16 @@ function ./game/event/17_king_game:
 function ./game/event/18_lucky_doll:
      event_template("幸运玩偶","gold","qvq")
      execute as @a[tag=ingame,tag=!out] as @s run loot give @s loot yw-pillar:doll
-
+function ./game/event/19_hungry:
+     event_template("饿啊饿啊","#587653","eaea")
+     execute as @a[tag=ingame,tag=!out] effect give @s hunger 30 40 true
+function ./game/event/20_black:
+     event_template("黑","white","真的黑")
+     title @a[tag=ingame,tag=!out] title "\uE005"
+function ./game/event/21_speed:
+     event_template("Speed","aqua","🦽冲刺冲刺🦽")
+     execute as @a[tag=ingame,tag=!out] run attribute @s movement_speed modifier add yw-pillar:event.speed 0.2 add_value
+     
 # 规则
 from ./lib/rule import rule_template
 
@@ -105,3 +99,4 @@ from ./lib/pillar import pillar_tempalte
 pillar_tempalte("wool","bedrock")
 pillar_tempalte("nether","red_nether_bricks")
 pillar_tempalte("glass","glass")
+pillar_tempalte("void","stone")

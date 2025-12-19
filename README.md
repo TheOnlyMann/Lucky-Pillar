@@ -2,7 +2,7 @@
 
 # 幸运之柱
 
-> **版本**: 0.1.5  
+> **版本**: 0.1.6  
 > **作者**: 一条鱼丸_  
 > **Minecraft**: 1.21.11
 
@@ -12,7 +12,7 @@
 
 ### 核心玩法
 
-- **多人竞技**: 支持 **2-8** 名玩家同场竞技
+- **多人竞技**: 支持 **2-12** 名玩家同场竞技
 - **随机物品**: 每回合随机获得不同的武器和道具
 - **动态事件**: 游戏过程中会触发各种随机事件
 - **生存挑战**: 在有限的平台上生存并击败对手
@@ -27,6 +27,7 @@
 | **羊毛** | 经典 |
 | **地狱** | 经典 维度：下界 |
 | **玻璃** | 经典 |
+| **虚空** | 经典 |
 | **海洋** | 特殊 通过钓鱼获得物品，水有剧毒 | 
 
 ### 随机事件
@@ -52,7 +53,7 @@
 | **摸摸** | 玩家实体交互距离变为 10 | 
 | **背包交换** | 玩家背包物品随机交换 | 
 | **国王游戏** | 成王败寇 | 
-| **幸运玩偶** | 获得一个玩偶 | 
+| **幸运玩偶** | 获得一个加强版不死图腾 | 
 
 ### 特殊规则
 
@@ -79,6 +80,16 @@
 | ----------- | ----------- |
 | `function yw-pillar:game/end` | 直接结束游戏 |
 | `function yw-pillar:utils/game/remove_one_player`   | 处理玩家中途离开 |
+| `function yw-pillar:utils/game/skip_event`   | 跳过当前事件 |
+
+### server.properties
+
+```properties
+difficulty=hard
+motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.5§r\n§2作者：§r§b§l§n一条鱼丸_
+resource-pack=https://gh-proxy.com/https://github.com/YuWan886/YuWan-Server/releases/download/pack/1.21.11-Lucky-Pillar.zip
+spawn-protection=0
+```
 
 ## 开发笔记
 

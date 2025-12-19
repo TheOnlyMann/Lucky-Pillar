@@ -69,6 +69,19 @@
         },
         {
             "label": {
+                "text": "虚空",
+                "color": "#4e0761"
+            },
+            "tooltip": {
+                "text": "经典模式"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.Map set 104"
+            }
+        },
+        {
+            "label": {
                 "text": "海洋",
                 "color": "blue"
             },

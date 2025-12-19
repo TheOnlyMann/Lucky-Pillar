@@ -1,0 +1,48 @@
+{
+    "type": "multi_action",
+    "title": [ "", { "color": "#bd2fc2", "text": "幸" }, { "color": "#cf5f85", "text": "运" }, { "color": "#e28e47", "text": "之" }, { "color": "#f4bd0a", "text": "柱" }, { "text": " | OP 指令" } ],
+    "columns": 1,
+    "actions": [
+        {
+            "label": {
+                "text": "终止游戏"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "/function yw-pillar:game/end"
+            }
+        },
+        {
+            "label": {
+                "text": "玩家中途退出游戏"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "/function yw-pillar:utils/game/remove_one_player"
+            },
+            "tooltip": {
+                "text": "用来处理游玩中的玩家掉线导致游戏无法正常结束的bug",
+                "color": "red",
+                "italic": true
+            }
+        },
+        {
+            "label": {
+                "text": "跳过当前事件"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "/function yw-pillar:utils/game/skip_event"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "text": "返回"
+        },
+        "action": {
+            "type": "show_dialog",
+            "dialog": "yw-pillar:quick_actions"
+        }
+    }
+}

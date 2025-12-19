@@ -79,3 +79,4 @@ scoreboard players set $20 math 20
 
 execute unless score #Game Init matches 1 run function yw-pillar:init
 
+tellraw @a[tag=debug] ["",{text:"[Debug]",color:"dark_purple",bold:true},{text:"数据包重载成功！",color:"green"}]

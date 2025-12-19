@@ -1,6 +1,7 @@
 execute if score #Game MapNumber matches 101 run function yw-pillar:game/pillars/wool/ingame
 execute if score #Game MapNumber matches 102 in yw-pillar:the_nether_2 run function yw-pillar:game/pillars/nether/ingame
 execute if score #Game MapNumber matches 103 run function yw-pillar:game/pillars/glass/ingame
+execute if score #Game MapNumber matches 104 run function yw-pillar:game/pillars/void/ingame
 execute if score #Game MapNumber matches 201 run function yw-pillar:game/pillars/sea/ingame
 
 # 随机事件
