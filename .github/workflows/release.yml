@@ -1,19 +1,25 @@
-name: Create Release on Push
+name: Create Release on Merge to Master
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches: [master]
   workflow_dispatch:
 
 jobs:
   release:
+    if: github.event_name == 'push' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write 
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,7 +32,7 @@ jobs:
           toolchain: stable
           override: true
 
-      - name: Set PYO3_USE_ABI3_FORWARD_COMPATIBILITY
+      - name: Set PYO3 compatibility env
         run: echo "PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1" >> $GITHUB_ENV
 
       - name: Install dependencies
@@ -34,33 +40,67 @@ jobs:
           pip install beet bolt mecha stewbeet==2.3.13 stouputils==1.10.4
 
       - name: Get version from beet.yaml
-        id: get_version
+        id: version
         run: |
           BEET_VERSION=$(python -c "import yaml; print(yaml.safe_load(open('beet.yaml'))['version'])")
           TIMESTAMP=$(date +%Y%m%d%H%M%S)
           RELEASE_VERSION="${BEET_VERSION}-${TIMESTAMP}"
-          echo "RELEASE_VERSION=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
+          echo "version=${RELEASE_VERSION}" >> $GITHUB_OUTPUT
 
       - name: Build project
         run: beet build
 
       - name: Archive build artifacts
         run: |
-          # For datapack - pack directly from build directory to get data/ and pack.mcmeta in zip root
-          cd build/yw-pillar-datapack && zip -r ../../yw-pillar-datapack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip . && cd ../../
+          cd build/yw-pillar-datapack
+          zip -r "../../yw-pillar-datapack-${{ steps.version.outputs.version }}.zip" .
+          cd ../../
+          
+          cd build/yw-pillar-resourcepack
+          zip -r "../../yw-pillar-resourcepack-${{ steps.version.outputs.version }}.zip" .
+          cd ../../
 
-          # For resourcepack - pack directly from build directory to get assets/ and pack.mcmeta in zip root
-          cd build/yw-pillar-resourcepack && zip -r ../../yw-pillar-resourcepack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip . && cd ../../
+      - name: Generate custom changelog with commit links
+        id: changelog
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 @^ 2>/dev/null || echo "")
+          
+          if [ -z "$PREV_TAG" ]; then
+            LOG_RANGE="HEAD"
+          else
+            LOG_RANGE="${PREV_TAG}..HEAD"
+          fi
+          
+          CUSTOM_LOG=$(git log $LOG_RANGE --pretty=format:"- [%h](https://github.com/${{ github.repository }}/commit/%H) %s" --no-merges)
+          
+          if [ -z "$CUSTOM_LOG" ]; then
+            CUSTOM_LOG="- No new commits since last release."
+          fi
+          
+          CUSTOM_LOG="${CUSTOM_LOG//$'\n'/\\n}"
+          echo "log=${CUSTOM_LOG}" >> $GITHUB_OUTPUT
 
       - name: Create Release
+        if: github.event_name == 'push' || github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.get_version.outputs.RELEASE_VERSION }}
-          name: v${{ steps.get_version.outputs.RELEASE_VERSION }}
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Lucky Pillar v${{ steps.version.outputs.version }}
           generate_release_notes: true
-          body: Automated release based on beet.yaml version and timestamp.
+          body: |
+            # Lucky Pillar Snapshot Release
+            
+            **Version:** ${{ steps.version.outputs.version }}
+            
+            **Latest Commit:** [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
+            
+            ### Recent Changes
+            ${{ steps.changelog.outputs.log }}
+            
+            ---
+            *Auto-generated release notes below:*
           files: |
-            yw-pillar-datapack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip
-            yw-pillar-resourcepack-${{ steps.get_version.outputs.RELEASE_VERSION }}.zip
+            yw-pillar-datapack-${{ steps.version.outputs.version }}.zip
+            yw-pillar-resourcepack-${{ steps.version.outputs.version }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

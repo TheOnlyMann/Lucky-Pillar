@@ -1,0 +1,1 @@
+give @a stick[item_model="yw-pillar:christmas_hat",equippable={slot:"head"}]

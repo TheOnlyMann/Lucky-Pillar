@@ -4,3 +4,6 @@ team join Ready
 tag @s add ready
 
 execute if score #Game GameStatus matches 1 run function yw-pillar:utils/player/join/ingame
+
+# 节日
+function yw-pillar:utils/festival/all

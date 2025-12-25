@@ -9,3 +9,4 @@ pyproject.toml
 release
 .beet_cache
 src/plugin/mcsm_upload
+update.md

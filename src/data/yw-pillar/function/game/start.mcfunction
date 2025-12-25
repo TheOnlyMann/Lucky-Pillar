@@ -20,7 +20,8 @@ gamemode adventure @a[tag=ready]
 tag @a[tag=ready] add ingame
 team join InGame @a[tag=ready]
 
-execute as @a run function yw-pillar:utils/player/reset/all
+weather clear
+execute as @a as @s run function yw-pillar:utils/player/reset/all
 dialog clear @a
 clear @a
 effect clear @a
@@ -44,3 +45,6 @@ time set day
 gamerule keep_inventory false
 
 tellraw @a "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+# 节日
+function yw-pillar:utils/festival/all

@@ -1,0 +1,75 @@
+{
+	"textures": {
+		"1": "yw-pillar:item/christmas_hat"
+	},
+	"elements": [
+		{
+			"from": [2.5, 6.5, 2.5],
+			"to": [13.5, 9.5, 13.5],
+			"faces": {
+				"north": {
+					"uv": [0, 1.5, 5.5, 3],
+					"texture": "#1"
+				},
+				"east": {
+					"uv": [11, 1.5, 5.5, 3],
+					"texture": "#1"
+				},
+				"south": {
+					"uv": [0, 3, 5.5, 4.5],
+					"texture": "#1"
+				},
+				"west": {
+					"uv": [5.5, 1.5, 11, 3],
+					"texture": "#1"
+				},
+				"up": {
+					"uv": [11, 8.5, 5.5, 3],
+					"texture": "#1"
+				}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [5, 0, 0],
+			"translation": [0, -0.24491, -0.2214],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [5, 0, 0],
+			"translation": [0, -0.24491, -0.2214],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [6.0963, 34.84748, -3.49226],
+			"translation": [0.01641, 2.25509, 0.02343],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [6.0963, 34.84748, -3.49226],
+			"translation": [0.01641, 2.25509, 0.02343],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"rotation": [5, 0, 0],
+			"translation": [0, -1.74491, 0.0286],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [90, 85, -90],
+			"translation": [-2.4428, -3.48982, 0],
+			"scale": [1, 1, 1]
+		},
+		"head": {
+			"rotation": [5, 0, 0],
+			"translation": [0, 5.18976, 0.08295],
+			"scale": [1.45, 1.45, 1.45]
+		},
+		"fixed": {
+			"rotation": [90, 85, -90],
+			"translation": [0.0572, -3.48982, -4.25],
+			"scale": [1, 1, 1]
+		}
+	}
+}

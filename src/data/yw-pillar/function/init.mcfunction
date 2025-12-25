@@ -35,6 +35,7 @@ team add Out {text:"☠"}
 team modify Out color red
 team modify Out prefix {text:"[☠]",color:"red"}
 
+gamerule command_blocks_work true
 gamerule spawn_phantoms false
 gamerule spawn_mobs false
 gamerule advance_weather false

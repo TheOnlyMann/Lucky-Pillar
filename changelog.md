@@ -3,7 +3,7 @@
 ### Added
 
 - 地图：
-    - 月球：特色，低重力
+    - 月球：特殊，低重力
 - 事件：
     - 饿啊饿啊
     - 黑
@@ -22,7 +22,30 @@
 ### Fixed
 
 - **CREEPER**有时候只召唤一只闪电苦力怕
+- 不下雨
 
+### Added
+
+- Maps:
+    - Moon: Features, low gravity
+- Events:
+    - Starving Starving
+    - Darkness
+    - Speed
+    - Miniaturization
+    - Gigantification
+    - Nuclear Power
+    - Rainy Day
+- Achievement:
+    - It's Raining in My World
+- Quick Menu:
+    - OP Commands
+
+### Changed
+
+### Fixed
+
+- **CREEPER** sometimes only summons one lightning creeper
 
 ## 0.1.5-fix
 
