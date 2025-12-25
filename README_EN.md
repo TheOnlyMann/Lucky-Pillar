@@ -6,7 +6,7 @@
 > **Creator**: 一条鱼丸_  
 > **Minecraft**: 1.21.11  
 
-[![Modrinth](https://img.shields.io/badge/Modrinth-Download-teal?style=for-the-badge&logo=modrinth)](https://modrinth.com/modpack/lucky-pillar)  [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/minecraft/modpacks/lucky-pillar)  [![PlanetMinecraft](https://img.shields.io/badge/PlanetMinecraft-Download-brightgreen?style=for-the-badge&logo=minecraft)](https://www.planetminecraft.com/project/lucky-pillar/)  [![MineBBS](https://img.shields.io/badge/MineBBS-Download-blue?style=for-the-badge&logo=minecraft)](https://www.minebbs.com/resources/lucky-pillar.13935/)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-teal?style=for-the-badge&logo=modrinth)](https://modrinth.com/modpack/lucky-pillar)  [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/minecraft/modpacks/lucky-pillar)  [![MinecraftMaps](https://img.shields.io/badge/MinecraftMaps-Download-green?style=for-the-badge&logo=minecraft)](https://www.minecraftmaps.com/51797-lucky-pillar)  [![PlanetMinecraft](https://img.shields.io/badge/PlanetMinecraft-Download-brightgreen?style=for-the-badge&logo=minecraft)](https://www.planetminecraft.com/project/lucky-pillar/)  [![MineBBS](https://img.shields.io/badge/MineBBS-Download-blue?style=for-the-badge&logo=minecraft)](https://www.minebbs.com/resources/lucky-pillar.13935/)
 
 ## Game Introduction
 
@@ -55,11 +55,13 @@
 | **Inventory Exchange** | Players' inventory items are randomly exchanged |
 | **King Game** | Winner takes all |
 | **Lucky Doll** | Obtain an enhanced totem of undying |
-| **饿啊饿啊** | 获得饥饿(40)30s | 
-| **黑** | 黑(10s) | 
-| **Speed** | 🦽冲刺冲刺🦽 | 
-| **迷你化** | 玩家尺寸-0.8 | 
-| **巨大化** | 玩家尺寸+4 | 
+| **Starving Starving** | Gain Hunger (40) for 30 seconds |
+| **Darkness** | Darkness (10s) |
+| **Speed** | 🦽 Sprint Sprint 🦽 |
+| **Miniaturization** | Player size -0.8 |
+| **Gigantification** | Player size +4 |
+| **Nuclear Power** | Summon a charged creeper named 'Broken Broken' |
+| **Rainy Day** | Weather changes to rain, obtain a trident with Riptide III |
 
 ### Special Rules
 
@@ -92,7 +94,7 @@
 
 ```properties
 difficulty=hard
-motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.5§r\n§2作者：§r§b§l§n一条鱼丸_
-resource-pack=https://gh-proxy.com/https://github.com/YuWan886/YuWan-Server/releases/download/pack/1.21.11-Lucky-Pillar.zip
+motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.6-Beta§r\n§2作者：§r§b§l§n一条鱼丸_
+resource-pack=https://github.com/YuWan886/YuWan-Server/releases/download/pack1/1.21.11-Lucky-Pillar.zip
 spawn-protection=0
 ```

@@ -19,6 +19,7 @@ tag @a remove ingame
 tag @a[tag=ready] remove spectator
 team join Ready @a[tag=ready]
 
+weather clear
 clear @a
 effect clear @a
 gamemode adventure @a
@@ -37,3 +38,6 @@ worldborder set 114514
 
 advancement revoke @a only yw-pillar:game/item/bow
 advancement revoke @a only yw-pillar:game/item/crossbow
+
+# 节日
+function yw-pillar:utils/festival/all

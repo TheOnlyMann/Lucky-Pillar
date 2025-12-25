@@ -1,0 +1,31 @@
+{
+	"model": {
+		"type": "composite",
+		"models": [
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/0"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/1"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/2"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/3"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/4"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/christmas_hat/5"
+			}
+		]
+	}
+}

@@ -1,0 +1,1 @@
+item replace entity @a armor.head with stick[custom_name={text:"圣诞帽",color:"gold",bold:true},item_model="yw-pillar:christmas_hat",equippable={slot:"head"}]
