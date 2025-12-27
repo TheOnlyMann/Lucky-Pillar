@@ -1,0 +1,56 @@
+{
+    "type": "multi_action",
+    "title": [
+        "",
+        {
+            "color": "#bd2fc2",
+            "text": "幸"
+        },
+        {
+            "color": "#cf5f85",
+            "text": "运"
+        },
+        {
+            "color": "#e28e47",
+            "text": "之"
+        },
+        {
+            "color": "#f4bd0a",
+            "text": "柱"
+        },
+        {
+            "text": " | 游戏模式",
+            "color": "yellow"
+        }
+    ],
+    "columns": 1,
+    "actions": [
+        {
+            "label": {
+                "text": "单人"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.GameMode set 1"
+            }
+        },
+        {
+            "label": {
+                "text": "双人"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.GameMode set 2"
+            }
+        }
+    ],
+    "exit_action": {
+        "label": {
+            "text": "返回"
+        },
+        "action": {
+            "type": "run_command",
+            "command": "trigger TriggerSetting.Dialog set 1"
+        }
+    }
+}

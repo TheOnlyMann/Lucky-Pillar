@@ -1,4 +1,5 @@
-execute as @a[scores={DeathCheck=1..}] if score #Game GameMode matches 0 run function yw-pillar:game/progress/out/individual
+execute as @a[scores={DeathCheck=1..}] if score #Game GameMode matches 1 run function yw-pillar:game/progress/out/individual
+execute as @a[scores={DeathCheck=1..}] if score #Game GameMode matches 2 run function yw-pillar:game/progress/out/individual
 
 execute as @a[scores={KilledCheck=1..}] run function yw-pillar:utils/player/killed
 

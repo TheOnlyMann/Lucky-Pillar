@@ -1,0 +1,15 @@
+{
+	"model": {
+		"type": "composite",
+		"models": [
+			{
+				"type": "model",
+				"model": "yw-pillar:item/special/long_hand/0"
+			},
+			{
+				"type": "model",
+				"model": "yw-pillar:item/special/long_hand/0"
+			}
+		]
+	}
+}

@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "enchanted_book": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "enchanted_book",
+                    "components": {
+                        "custom_data": {
+                            "item": "enchanted_book"
+                        }
+                    }
+                },
+                "player": {
+                    "equipment": {
+                        "mainhand": {
+                            "items": "enchanted_book",
+                            "components": {
+                                "custom_data": {
+                                    "item": "enchanted_book"
+                                }
+                            }
+                        },
+                        "offhand": {
+                            "count": {
+                                "min": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/enchanted_book/use"
+    }
+}

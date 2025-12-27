@@ -1,7 +1,7 @@
 scoreboard players add @s WinCount 1
 
 title @a title ["",{text:"游戏结束！",color:"yellow"}]
-title @a subtitle ["",{text:"MVP ",color:"gold",bold:true},{selector:"@s",color:"green"}]
+title @a subtitle ["",{text:"MVP ",color:"gold",bold:true},{selector:"@a[tag=ingame,tag=!out]",color:"green"}]
 execute as @a at @s run playsound minecraft:entity.ender_dragon.ambient master @s
 effect give @s resistance 10 4 true
 scoreboard players add @a[tag=ingame] CompletedCount 1

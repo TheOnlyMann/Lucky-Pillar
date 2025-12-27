@@ -9,9 +9,11 @@ kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{"item":"hotbar
 
 
 # Trigger
+scoreboard players enable @a TriggerSetting.GameMode
 scoreboard players enable @a TriggerSetting.Map
 scoreboard players enable @a TriggerSetting.Dialog
 scoreboard players enable @a TriggerSetting.Rule
+execute as @a[scores={TriggerSetting.GameMode=1..}] run function yw-pillar:settings/gamemode
 execute as @a[scores={TriggerSetting.Map=1..}] run function yw-pillar:settings/map with storage yw-pillar:settings game
 execute as @a[scores={TriggerSetting.Dialog=1..}] run function yw-pillar:dialog/trigger
 execute as @a[scores={TriggerSetting.Rule=1..}] run function yw-pillar:settings/rule

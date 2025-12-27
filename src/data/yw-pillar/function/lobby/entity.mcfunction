@@ -11,10 +11,13 @@ kill @e[tag=lobby.logo]
 summon item_display 100 3 109 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/logo"}},Tags:["lobby.logo"],transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[4f,4f,4f],right_rotation:[0f,0f,0f,1f]}}
 
 kill @e[tag=lobby.bili]
-summon item_display 108 2 98 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/bili"}},Tags:["lobby.bili"],Rotation:[90,0],Passengers:[{id:"interaction",Tags:["ita.bili","lobby.bili"]}]}
+summon item_display 108 2 99 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/bili"}},Tags:["lobby.bili"],Rotation:[90,0],Passengers:[{id:"interaction",Tags:["ita.bili","lobby.bili"]}]}
 
 kill @e[tag=lobby.qq]
 summon item_display 108 2 100 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/qq"}},Tags:["lobby.qq"],Rotation:[90,0],Passengers:[{id:"interaction",Tags:["ita.qq","lobby.qq"]}]}
+
+kill @e[tag=lobby.discord]
+summon item_display 108 2 101 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/discord"}},Tags:["lobby.discord"],Rotation:[90,0],Passengers:[{id:"interaction",Tags:["ita.discord","lobby.discord"]}]}
 
 kill @e[tag=lobby.bug]
 summon item_display 108 2 102 {item:{id:"white_dye",components:{item_model:"yw-pillar:lobby/bug"}},Tags:["lobby.bug"],Rotation:[90,0],Passengers:[{id:"interaction",Tags:["ita.bug","lobby.bug"]}]}

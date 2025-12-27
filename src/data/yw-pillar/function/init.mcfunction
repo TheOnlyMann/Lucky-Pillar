@@ -1,6 +1,6 @@
 scoreboard players set #Game Init 1
 scoreboard players set #Game GameStatus 0
-scoreboard players set #Game GameMode 0
+scoreboard players set #Game GameMode 1
 scoreboard players set #Game MapNumber 101
 
 scoreboard players set #Timer LootTimer 5
@@ -34,6 +34,7 @@ team modify InGame seeFriendlyInvisibles false
 team add Out {text:"☠"}
 team modify Out color red
 team modify Out prefix {text:"[☠]",color:"red"}
+function yw-pillar:utils/game/add_team
 
 gamerule command_blocks_work true
 gamerule spawn_phantoms false
@@ -51,5 +52,7 @@ worldborder warning distance 0
 setworldspawn 100 3 100
 forceload add 109 91 91 109
 forceload add 16 16 -16 -16
+
+function yw-pillar:lobby/entity
 
 tellraw @a ["",{text:"[Tips]",color:"gold",bold:true},{text:"数据包初始化完成！",color:"green"}]

@@ -16,11 +16,34 @@ append function yw-pillar:utils/player/store_inv:
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.11 from entity @s armor.legs
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.12 from entity @s armor.feet
     item replace entity @e[type=chest_minecart,distance=..1,limit=1,tag=store_hotbar] container.13 from entity @s weapon.offhand
-    
-# 分配编号
-def number():
+
+# 分配
+append function yw-pillar:utils/player/number/single/distribute:
     for i in range(2,13):
-        function f'yw-pillar:utils/player/number/{i}':
+        execute if score #Game PlayerCount.Ready matches i run function f"yw-pillar:utils/player/number/single/{i}"
+
+append function yw-pillar:utils/player/number/double/distribute:
+    for i in range(2,13):
+        execute if score #Game PlayerCount.ReadyTeam matches i run function f"yw-pillar:utils/player/number/double/{i}"
+
+# 分配编号
+def number_single():
+    for i in range(2,13):
+        function f'yw-pillar:utils/player/number/single/{i}':
           for n in range(1,i+1):
              execute as @r[tag=ready,scores={Number=0}] run scoreboard players set @s Number n
-number()
+def number_double():
+    for i in range(2,13):
+        function f'yw-pillar:utils/player/number/double/{i}':
+          for n in range(1,i+1):
+             execute as @r[tag=ready,scores={Number=0}] run scoreboard players set @s Number n
+             execute as @r[tag=ready,scores={Number=0}] run scoreboard players set @s Number n
+             team join f"Team{n}" @a[scores={Number=n}]
+number_single()
+number_double()
+
+# 队伍编号
+append function yw-pillar:utils/player/number/double/team_number:
+    scoreboard players set @s TeamNumber 0
+    for i in range(1,13):
+        execute as @s[team=f"Team{i}"] run scoreboard players set @s TeamNumber i

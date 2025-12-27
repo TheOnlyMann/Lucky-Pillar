@@ -6,6 +6,7 @@ def beet_default(ctx: Context):
     insert_thing = f"""
 data modify storage yw-pillar:settings game set value \
 {{\
+    game_mode:"单人",\
     map_name:"羊毛",\
     map_id:"wool",\
     player_count:0,\

@@ -114,7 +114,7 @@
                                 "equippable": {
                                     "slot": "head"
                                 },
-                                "item_model": "yw-pillar:gediao",
+                                "item_model": "yw-pillar:special/gediao",
                                 "attribute_modifiers": [
                                     {
                                         "id": "yw-pillar:gediao",
@@ -197,6 +197,79 @@
                                     }
                                 ],
                                 "item_model": "yw-pillar:special/meow_axe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "手",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [
+                                    {
+                                        "text": "手长一点怎么了？",
+                                        "color": "gray"
+                                    }
+                                ],
+                                "attribute_modifiers": [
+                                    {
+                                        "id": "yw-pillar:long_hand_1",
+                                        "type": "entity_interaction_range",
+                                        "amount": 6,
+                                        "operation": "add_value",
+                                        "slot": "hand"
+                                    },
+                                    {
+                                        "id": "yw-pillar:long_hand_2",
+                                        "type": "block_interaction_range",
+                                        "amount": 6,
+                                        "operation": "add_value",
+                                        "slot": "hand"
+                                    }
+                                ],
+                                "item_model": "yw-pillar:special/long_hand"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "bone",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "有骨没鸡爪",
+                                    "color": "red",
+                                    "italic": false
+                                },
+                                "lore": [
+                                    [{"italic":false,"color":"white","text":""},{"color":"gray","text":"食用回复"},{"color":"red","text":"❤x1"}]
+                                ],
+                                "consumable": {
+                                    "animation": "eat",
+                                    "on_consume_effects": [
+                                        {
+                                            "type": "apply_effects",
+                                            "effects": [
+                                                {
+                                                    "id": "instant_health",
+                                                    "duration": 1
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
                             }
                         }
                     ]

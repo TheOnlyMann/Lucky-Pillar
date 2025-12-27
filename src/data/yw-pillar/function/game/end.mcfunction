@@ -10,10 +10,10 @@ scoreboard players set #Game PlayerCount.Out 0
 scoreboard players set #Game BorderWidth 1145
 scoreboard players set #Game CollapseTimes 0
 scoreboard players set #Game EventID 0
-scoreboard players add @a[tag=ingame] CompletedCount 1
 scoreboard players reset * var
 scoreboard objectives remove KilledCheck
 
+kill @a[tag=ingame,tag=!out]
 tag @a remove out
 tag @a remove ingame
 tag @a[tag=ready] remove spectator
@@ -30,6 +30,7 @@ function yw-pillar:game/pillars/reset_1
 function yw-pillar:lobby/entity
 execute as @a run function yw-pillar:utils/player/reset/all
 function yw-pillar:game/sidebar/lobby
+schedule clear yw-pillar:schedule/1s
 
 data modify storage yw-pillar:settings game.event_name set value ''
 

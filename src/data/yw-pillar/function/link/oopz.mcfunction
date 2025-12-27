@@ -1,0 +1,1 @@
+tellraw @a ["",{color:"gold",bold:true,text:"[Tips]",extra:[{underlined:true,text:"点击加入",click_event:{action:"open_url",url:"https://oopz.cn/i/YTIAdu"}}]},{color:"aqua",bold:true,underlined:true,text:"OOPZ",click_event:{action:"open_url",url:"https://oopz.cn/i/YTIAdu"}}]

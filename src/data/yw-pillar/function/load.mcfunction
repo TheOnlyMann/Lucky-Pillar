@@ -11,6 +11,7 @@ scoreboard objectives add MapNumber dummy
 scoreboard objectives add BorderWidth dummy
 scoreboard objectives add CollapseTimes dummy
 scoreboard objectives add PlayerCount.Ready dummy
+scoreboard objectives add PlayerCount.ReadyTeam dummy
 scoreboard objectives add PlayerCount.Total dummy
 scoreboard objectives add PlayerCount.Alive dummy
 scoreboard objectives add PlayerCount.Out dummy
@@ -38,7 +39,9 @@ scoreboard objectives modify side displayautoupdate true
 
 ## Player
 scoreboard objectives add Number dummy
+scoreboard objectives add TeamNumber dummy
 scoreboard objectives add DeathCheck deathCount
+scoreboard objectives add TriggerSetting.GameMode trigger
 scoreboard objectives add TriggerSetting.Map trigger
 scoreboard objectives add TriggerSetting.Dialog trigger
 scoreboard objectives add TriggerSetting.Rule trigger
@@ -76,6 +79,7 @@ scoreboard objectives add Rota.Y dummy
 scoreboard objectives add math dummy
 scoreboard players set $100 math 100
 scoreboard players set $20 math 20
+scoreboard players set $2 math 2
 
 execute unless score #Game Init matches 1 run function yw-pillar:init
 

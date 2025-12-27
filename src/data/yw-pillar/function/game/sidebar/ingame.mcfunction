@@ -1,5 +1,6 @@
 ##  幸运之柱--YuWan
-# ------- v0.1.1 ------- 7
+# ------- v0.1.1 ------- 8
+# 游戏模式：xx             7
 # 游戏人数：xx/xx          6
 # 游戏时长：xxm xxs        5
 # 当前规则：xx             4
@@ -16,7 +17,8 @@ scoreboard players reset %side_settings_event_name% side
 scoreboard players reset %side_settings_border_time% side
 scoreboard players reset %side_settings_rule% side
 # 添加
-scoreboard players set %side_version% side 7
+scoreboard players set %side_version% side 8
+scoreboard players set %side_game_mode% side 7
 scoreboard players set %side_playercount% side 6
 scoreboard players set %side_game_time% side 5
 execute if score #Game RuleID matches 1.. run scoreboard players set %side_settings_rule% side 4
@@ -27,6 +29,7 @@ scoreboard players set %side_release_time% side 0
 
 # 显示
 scoreboard players display name %side_version% side [{text:"------- ",color:"#1bf169"},{nbt:"info.version",storage:"yw-pillar:system"},{text:" -------"}]
+scoreboard players display name %side_game_mode% side [{text:"游戏模式："},{nbt:"game.game_mode",storage:"yw-pillar:settings",color:"dark_purple",bold:true}]
 scoreboard players display name %side_playercount% side ["",{text:"游戏人数："},{score:{name:"#Game",objective:"PlayerCount.Alive"},color:"green",bold:true},"/",{score:{name:"#Game",objective:"PlayerCount.Total"},color:"gold",bold:true}]
 scoreboard players display name %side_game_time% side ["",{text:"游戏时长："},{score:{name:"#Timer",objective:"GameTime.Min"},bold:true},"m"," ",{score:{name:"#Timer",objective:"GameTime.Sec"},bold:true},"s"]
 execute if score #Game RuleID matches 1.. run scoreboard players display name %side_settings_rule% side ["",{text:"当前规则："},{nbt:"game.rule_name",storage:"yw-pillar:settings",color:"light_purple",bold:true}]

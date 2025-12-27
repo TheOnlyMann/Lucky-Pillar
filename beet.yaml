@@ -32,10 +32,11 @@ pipeline:
     - script.insert
     - script.custom_function_headers
     - stewbeet.plugins.auto.headers
+    - beet.contrib.minify_json
     
 meta:
     bolt:
       entrypoint: 
         - '*'
     mecha:
-        commands: "https://gh-proxy.com/https://github.com/misode/mcmeta/blob/summary/commands/data.json"
+        commands: "commands.json"

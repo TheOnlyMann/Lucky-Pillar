@@ -1,0 +1,9 @@
+{
+
+	"parent": "yw-pillar:lobby/bili",
+	"textures": {
+		"2": "yw-pillar:item/lobby/discord",
+		"4": "yw-pillar:item/lobby/base",
+		"particle": "yw-pillar:item/lobby/base"
+	}
+}
