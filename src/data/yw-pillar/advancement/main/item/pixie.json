@@ -1,0 +1,40 @@
+{
+    "criteria": {
+        "pixie": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "netherite_boots",
+                        "components": {
+                            "custom_data": {
+                                "item": "pixie"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/root",
+    "display": {
+        "title": {
+            "text": "皮鞋",
+            "color": "gold"
+        },
+        "description": {
+            "text": "“给我檫皮鞋”",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "netherite_boots",
+            "components": {
+                "trim": {
+                    "material": "redstone",
+                    "pattern": "snout"
+                }
+            }
+        }
+    }
+}

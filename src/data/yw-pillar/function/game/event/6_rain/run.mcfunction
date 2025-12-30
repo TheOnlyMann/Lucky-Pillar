@@ -6,4 +6,4 @@ execute as @a[tag=ingame,tag=!out] at @s run summon arrow ~ ~6 ~ {Tags:["event.6
 execute as @a[tag=ingame,tag=!out] at @s run summon arrow ~ ~6 ~ {Tags:["event.6_rain"],Motion:[0,-0.3,0],crit:true,life:600,Passengers:[{id:"item_display",item:{id:"iron_spear"},transformation:{translation:[0f,0f,0f],left_rotation:[0f,0f,-2f,1f],scale:[1f,1f,1f],right_rotation:[0f,0f,0f,1f]},Tags:["event.6_rain"]}]}
 execute as @a[tag=ingame,tag=!out] at @s run summon arrow ~ ~6 ~ {Tags:["event.6_rain"],Motion:[0,-0.3,0],crit:true,life:600,Passengers:[{id:"item_display",item:{id:"tnt"},Tags:["event.6_rain"]}]}
 
-execute as @e[type=arrow,tag=event.6_rain] run function yw-pillar:utils/event/random_arrow with entity @s
+execute as @e[type=arrow,tag=event.6_rain] run function yw-pillar:game/event/6_rain/run_2 with entity @s

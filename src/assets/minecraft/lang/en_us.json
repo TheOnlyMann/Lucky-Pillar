@@ -1,6 +1,18 @@
 {
     "menu.game": "\uE000",
     "container.crafting": "\uDAFF\uDFA1§f\uE001",
-    "multiplayer.player.joined": "§l§6[Tips]§r §a+ %s",
-    "multiplayer.player.left": "§l§6[Tips]§r §c- %s"
+    "multiplayer.player.joined": "\u00a7r\u00a76\u00a7l[Tips]\u00a7r\u00a77\u00a7l \u00a7r\u00a72+ %s",
+    "multiplayer.player.left": "\u00a7r\u00a76\u00a7l[Tips]\u00a7r\u00a77\u00a7l \u00a7r\u00a74- %s",
+    "menu.options": "\u00a7r\u00a7a\u00a7l\u00a7nOptions",
+    "options.sounds": "\u00a7r\u00a7a\u00a7l\u00a7nMusic & Sounds...",
+    "soundCategory.record": "\u00a7r\u00a7a\u00a7l\u00a7nCustom Music",
+    "yw-pillar.sound.fail_start":"开始失败",
+    "yw-pillar.sound.good":"Good",
+    "yw-pillar.sound.bad":"Bad",
+    "yw-pillar.sound.main":"音乐-主音乐",
+    "yw-pillar.sound.sea":"音乐-海洋",
+    "yw-pillar.sound.soft":"音乐-Soft",
+    "yw-pillar.sound.battle":"音乐-Battle",
+    "yw-pillar.sound.capixie":"擦皮鞋",
+    "yw-pillar.sound.yanpai":"我要验牌"
 }

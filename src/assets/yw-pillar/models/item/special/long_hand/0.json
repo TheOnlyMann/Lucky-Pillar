@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"0": "yw-pillar:item/special/long_hand"
+		"0": "yw-pillar:item/special/long_hand",
+		"particle":"yw-pillar:item/special/long_hand"
 	},
 	"elements": [
 		{

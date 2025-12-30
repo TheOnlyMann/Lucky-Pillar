@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "echo_shard_use": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "echo_shard",
+                    "predicates": {
+                        "custom_data": {
+                            "item": "echo_shard"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/echo_shard/use"
+    }
+}

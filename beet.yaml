@@ -13,6 +13,7 @@ ignore: []
 require:
     - "stewbeet"
     - "bolt"
+    - "beet.contrib.optifine"
 data_pack:
     name: "yw-pillar-datapack" 
     load: ["src"]    

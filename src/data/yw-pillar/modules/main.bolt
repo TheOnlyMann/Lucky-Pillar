@@ -56,7 +56,7 @@ function ./game/event/15_touch:
      execute as @a[tag=ingame,tag=!out] run attribute @s entity_interaction_range modifier add yw-pillar:event.pat_pat 10 add_value
 function ./game/event/16_inv_exchange:
      event_template("背包交换","green","这何尝不是一种NTR")
-     function yw-pillar:utils/event/inv_exchange/run
+     function yw-pillar:game/event/16_inv_exchange/run
 function ./game/event/17_king_game:
      event_template("国王游戏","gold","成王败寇")
      execute as @r[tag=ingame,tag=!out] run tag @s add event.17_king_game
@@ -85,11 +85,16 @@ function ./game/event/23_huge:
 function ./game/event/24_nuclear:
      event_template("核电","#06c103","核电，轻而易举")
      execute as @a[tag=ingame,tag=!out] at @s run summon creeper ~ ~ ~ {CustomName:{text:"坏了坏了",color:"red",bold:true},powered:true,ExplosionRadius:10}
+     execute as @a[tag=ingame,tag=!out] run advancement grant @s only yw-pillar:main/event/24_nuclear
 function ./game/event/25_rainy_day:
      event_template("雨天","aqua","我的世界下雨了☂")
      weather rain 24000
      give @a[tag=ingame,tag=!out] trident[enchantments={riptide:3}]
      advancement grant @a[tag=ingame,tag=!out] only yw-pillar:main/event/25_rainy_day 
+function ./game/event/26_greedy_slime:
+     event_template("贪吃的史莱姆","green","嚼嚼嚼~")
+     scoreboard players set $SlimeSize math 0
+     execute at @r[tag=ingame,tag=!out] run summon slime 0 66 0 {CustomName:{text:"大嘴",color:"red",bold:true},Tags:["event.26_greedy_slime"],Size:1,Glowing:true,attributes:[{id:"max_health",base:10}],active_effects:[{id:"slow_falling",duration:600}]}
 
 # 规则
 from ./lib/rule import rule_template
@@ -108,6 +113,8 @@ function ./game/rule/4_punch:
      execute as @a[tag=ingame,tag=!out] run attribute @s attack_damage base set 40
 function ./game/rule/5_inv_exchange:
      rule_template("背包交换","green",-11832829,"随机事件固定为 §l背包交换")
+function ./game/rule/6_i_sea_you:
+     rule_template("背包交换","white",-6287344,"\u00a7r玩家获得 \u00a7r\u00a73\u00a7l隐身\u00a7r,事件结束后获得 \u00a7r\u00a7l5s \u00a7r\u00a7f\u00a7l发光")
 
 #柱 
 from ./lib/pillar import pillar_tempalte

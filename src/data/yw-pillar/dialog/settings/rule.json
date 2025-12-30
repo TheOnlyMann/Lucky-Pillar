@@ -109,6 +109,21 @@
                 "type": "run_command",
                 "command": "trigger TriggerSetting.Rule set 5"
             }
+        },
+        {
+            "label": {
+                "text": "I sea you",
+                "color": "white",
+                "shadow_color": -6287344,
+                "bold": true
+            },
+            "tooltip": {
+                "text": "\u00a7r玩家获得 \u00a7r\u00a73\u00a7l隐身\u00a7r,事件结束后获得 \u00a7r\u00a7l5s \u00a7r\u00a7f\u00a7l发光"
+            },
+            "action": {
+                "type": "run_command",
+                "command": "trigger TriggerSetting.Rule set 6"
+            }
         }
     ],
     "exit_action": {

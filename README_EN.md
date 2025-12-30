@@ -62,6 +62,7 @@
 | **Gigantification** | Player size +4 |
 | **Nuclear Power** | Summon a charged creeper named 'Broken Broken' |
 | **Rainy Day** | Weather changes to rain, obtain a trident with Riptide III |
+| **Greedy Slime** | Spawns a slime that increases in size by 1 for every 5 items it consumes |
 
 ### Special Rules
 
@@ -69,11 +70,12 @@
 
 | Rule Name | Effect Description |
 |-----------|-------------------|
-| **Small but Cute** | All players' size reduced to 1/3 of original |
-| **Big! Big! Big!** | All players' size increased to 3/2 of original |
+| **Small but Cute** | Players' size reduced to 1/3 of original |
+| **Big! Big! Big!** | Players' size increased to 3/2 of original |
 | **My Partner** | Obtain a fox that provides strength and health regeneration while alive |
 | **One-Hit Kill** | Player attack damage becomes 40 |
 | **Inventory Exchange** | Random events are fixed to Inventory Exchange |
+| **I sea you** | Player gains invisibility, and after the event ends, gains 5 seconds of glowing |
 
 ### Game Mechanics
 
@@ -87,7 +89,7 @@
 | Command | Function |
 | ----------- | ----------- |
 | `function yw-pillar:game/end` | End the game directly |
-| `function yw-pillar:utils/game/remove_one_player`   | Handling a player leaving midway |
+| `function yw-pillar:utils/game/player_left_halfway`   | Handling a player leaving midway |
 | `function yw-pillar:utils/game/skip_event`   | Skip current event |
 
 ### server.properties

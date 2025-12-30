@@ -1,6 +1,7 @@
 {
 	"textures": {
-		"1": "yw-pillar:item/christmas_hat"
+		"1": "yw-pillar:item/christmas_hat",
+		"particle":"yw-pillar:item/christmas_hat"
 	},
 	"elements": [
 		{

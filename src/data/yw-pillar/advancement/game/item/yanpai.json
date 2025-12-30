@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "yanpai": {
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": "stick",
+                    "components": {
+                        "custom_data": {
+                            "item": "yanpai"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/yanpai"
+    }
+}

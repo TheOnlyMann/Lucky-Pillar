@@ -1,0 +1,34 @@
+{
+    "criteria": {
+        "pixie": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "netherite_boots",
+                        "components": {
+                            "custom_data": {
+                                "item": "pixie"
+                            }
+                        }
+                    }
+                ],
+                "player": {
+                    "equipment": {
+                        "feet": {
+                            "items": "netherite_boots",
+                            "components": {
+                                "custom_data": {
+                                    "item": "pixie"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/pixie"
+    }
+}

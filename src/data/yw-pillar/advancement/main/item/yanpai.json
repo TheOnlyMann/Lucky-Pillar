@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "yanpai": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "stick",
+                        "components": {
+                            "custom_data": {
+                                "item": "yanpai"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/root",
+    "display": {
+        "title": {
+            "text": "牌",
+            "color": "gold"
+        },
+        "description": {
+            "text": "“我要验牌”",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "stick",
+            "components": {
+                "item_model": "yw-pillar:special/card"
+            }
+        }
+    }
+}

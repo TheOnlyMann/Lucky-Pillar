@@ -64,6 +64,7 @@
 | **巨大化** | 玩家尺寸+4 | 
 | **核电** | 召唤一只名为“坏了坏了”的闪电苦力怕 | 
 | **雨天** | 天气变为雨天，获得一把激流III的三叉戟 | 
+| **贪吃的史莱姆** | 生成一只史莱姆，每吃掉5个掉落物，体积加1 |
 
 ### 特殊规则
 
@@ -76,6 +77,7 @@
 | **我的伙伴** | 获得一只狐狸 狐狸存活时,给玩家提供力量和生命回复 |
 | **一击必杀** | 玩家攻击伤害变成 §l40 |
 | **背包交换** | 随机事件固定为 §背包交换 |
+| **I sea you** | 玩家获得 隐身,事件结束后获得 5s 发光 |
 
 ### 游戏机制
 
@@ -89,7 +91,7 @@
 | 命令 | 作用 |
 | ----------- | ----------- |
 | `function yw-pillar:game/end` | 直接结束游戏 |
-| `function yw-pillar:utils/game/remove_one_player`   | 处理玩家中途离开 |
+| `function yw-pillar:utils/game/player_left_halfway`   | 处理玩家中途离开 |
 | `function yw-pillar:utils/game/skip_event`   | 跳过当前事件 |
 
 ### server.properties
@@ -103,4 +105,4 @@ spawn-protection=0
 
 ## 开发笔记
 
-[看看](./note.md)
+[看看](./dev.md)

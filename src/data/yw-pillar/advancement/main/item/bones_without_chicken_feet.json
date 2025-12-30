@@ -1,0 +1,34 @@
+{
+    "criteria": {
+        "bones_without_chicken_feet": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "bone",
+                        "components": {
+                            "custom_data": {
+                                "item": "bones_without_chicken_feet"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/root",
+    "display": {
+        "title": {
+            "text": "有骨无鸡爪",
+            "color": "red"
+        },
+        "description": {
+            "text": "好吃，嚼嚼嚼~",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "bone"
+        }
+    }
+}

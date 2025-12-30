@@ -2,8 +2,6 @@ from beet import Context
 import time
 from stouputils import measure_time, progress
 
-
-@measure_time(message="Execution time of 'custom_function_headers'")
 def add_function_headers(ctx: Context):
     """自定义函数头部添加插件 - 为所有函数添加标准化的头部注释"""
     

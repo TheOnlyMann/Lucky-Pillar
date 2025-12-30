@@ -1,0 +1,38 @@
+{
+    "criteria": {
+        "meow_axe": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "golden_axe",
+                        "components": {
+                            "custom_data": {
+                                "item": "meow_axe"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/root",
+    "display": {
+        "title": {
+            "text": "喵人斧？！",
+            "color": "light_purple"
+        },
+        "description": {
+            "text": "颗秒",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "golden_axe",
+            "components": {
+                "item_model": "yw-pillar:special/meow_axe",
+                "damage": 31
+            }
+        }
+    }
+}

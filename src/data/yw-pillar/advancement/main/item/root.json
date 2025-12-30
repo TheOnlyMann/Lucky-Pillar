@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "item_root": {
+            "trigger": "tick"
+        }
+    },
+    "display": {
+        "title": {
+            "text": "幸运之柱-物品"
+        },
+        "description": {
+            "text": "《幸运之柱》中有着很多奇妙的物品"
+        },
+        "icon": {
+            "id": "iron_axe"
+        },
+        "background": "block/chiseled_stone_bricks"
+    }
+}

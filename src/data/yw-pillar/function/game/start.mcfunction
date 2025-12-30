@@ -37,7 +37,7 @@ function yw-pillar:utils/player/number/main
 function yw-pillar:game/pillars/tp
 function yw-pillar:game/sidebar/ingame
 function yw-pillar:schedule/countdown
-execute as @a as @s at @s run function yw-pillar:utils/sound/main
+execute as @a as @s at @s run function yw-pillar:utils/music
 
 title @a times 0 2s 10t
 time set day

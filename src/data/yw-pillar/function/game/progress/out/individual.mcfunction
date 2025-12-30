@@ -7,7 +7,7 @@ scoreboard players add @s DeathCount 1
 scoreboard players remove #Game PlayerCount.Alive 1
 scoreboard players add #Game PlayerCount.Out 1
 
-spawnpoint @s ~ ~ ~
+execute at @s run spawnpoint @s ~ ~ ~
 gamemode spectator @s
 tag @s add out
 team join Out

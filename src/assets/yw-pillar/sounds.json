@@ -1,5 +1,5 @@
 {
-    "fail_start":{
+    "fail_start": {
         "sounds": [
             {
                 "name": "yw-pillar:fail_start",
@@ -8,7 +8,7 @@
         ],
         "subtitle": "yw-pillar.sound.fail_start"
     },
-    "good":{
+    "good": {
         "sounds": [
             {
                 "name": "yw-pillar:good"
@@ -16,7 +16,7 @@
         ],
         "subtitle": "yw-pillar.sound.good"
     },
-    "bad":{
+    "bad": {
         "sounds": [
             {
                 "name": "yw-pillar:bad",
@@ -25,7 +25,7 @@
         ],
         "subtitle": "yw-pillar.sound.bad"
     },
-    "main":{
+    "main": {
         "sounds": [
             {
                 "name": "yw-pillar:main",
@@ -34,7 +34,25 @@
         ],
         "subtitle": "yw-pillar.sound.main"
     },
-    "sea":{
+    "soft": {
+        "sounds": [
+            {
+                "name": "yw-pillar:soft",
+                "volume": 0.6
+            }
+        ],
+        "subtitle": "yw-pillar.sound.soft"
+    },
+    "battle": {
+        "sounds": [
+            {
+                "name": "yw-pillar:battle",
+                "volume": 0.6
+            }
+        ],
+        "subtitle": "yw-pillar.sound.battle"
+    },
+    "sea": {
         "sounds": [
             {
                 "name": "yw-pillar:sea",
@@ -42,5 +60,23 @@
             }
         ],
         "subtitle": "yw-pillar.sound.sea"
+    },
+    "capixie": {
+        "sounds": [
+            {
+                "name": "yw-pillar:capixie",
+                "volume": 1
+            }
+        ],
+        "subtitle": "yw-pillar.sound.capixie"
+    },
+    "yanpai": {
+        "sounds": [
+            {
+                "name": "yw-pillar:yanpai",
+                "volume": 1
+            }
+        ],
+        "subtitle": "yw-pillar.sound.yanpai"
     }
 }

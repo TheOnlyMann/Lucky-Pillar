@@ -196,7 +196,10 @@
                                         }
                                     }
                                 ],
-                                "item_model": "yw-pillar:special/meow_axe"
+                                "item_model": "yw-pillar:special/meow_axe",
+                                "custom_data": {
+                                    "item": "meow_axe"
+                                }
                             }
                         }
                     ]
@@ -249,12 +252,27 @@
                             "function": "set_components",
                             "components": {
                                 "custom_name": {
-                                    "text": "有骨没鸡爪",
+                                    "text": "有骨无鸡爪",
                                     "color": "red",
+                                    "bold": true,
                                     "italic": false
                                 },
                                 "lore": [
-                                    [{"italic":false,"color":"white","text":""},{"color":"gray","text":"食用回复"},{"color":"red","text":"❤x1"}]
+                                    [
+                                        {
+                                            "italic": false,
+                                            "color": "white",
+                                            "text": ""
+                                        },
+                                        {
+                                            "color": "gray",
+                                            "text": "食用回复"
+                                        },
+                                        {
+                                            "color": "red",
+                                            "text": "❤x1"
+                                        }
+                                    ]
                                 ],
                                 "consumable": {
                                     "animation": "eat",
@@ -269,6 +287,88 @@
                                             ]
                                         }
                                     ]
+                                },
+                                "custom_data": {
+                                    "item": "bones_without_chicken_feet"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "netherite_boots",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "皮鞋",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [
+                                    {
+                                        "text": "“给我檫皮鞋”",
+                                        "color": "gray"
+                                    }
+                                ],
+                                "attribute_modifiers": [
+                                    {
+                                        "id": "yw-pillar:pixie",
+                                        "type": "max_health",
+                                        "amount": 4,
+                                        "operation": "add_value",
+                                        "slot": "feet"
+                                    }
+                                ],
+                                "trim": {
+                                    "material": "redstone",
+                                    "pattern": "snout"
+                                },
+                                "tooltip_display": {
+                                    "hidden_components": [
+                                        "trim"
+                                    ]
+                                },
+                                "custom_data": {
+                                    "item": "pixie"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "牌",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [
+                                    {
+                                        "text": "“我要验牌”",
+                                        "color": "gray"
+                                    }
+                                ],
+                                "item_model": "yw-pillar:special/card",
+                                "consumable": {
+                                    "animation": "none",
+                                    "consume_seconds": 0.01,
+                                    "has_consume_particles": false,
+                                    "sound": {
+                                        "sound_id": ""
+                                    }
+                                },
+                                "custom_data": {
+                                    "item": "yanpai"
                                 }
                             }
                         }

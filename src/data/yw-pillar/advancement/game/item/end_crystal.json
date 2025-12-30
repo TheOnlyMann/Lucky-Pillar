@@ -1,0 +1,26 @@
+{
+    "criteria": {
+        "end_crystal": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "end_crystal",
+                        "components": {
+                            "item_name": {
+                                "translate": "item.minecraft.end_crystal"
+                            }
+                        },
+                        "count": {
+                            "min": 1,
+                            "max": 64
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "yw-pillar:utils/game/item/end_crystal"
+    }
+}

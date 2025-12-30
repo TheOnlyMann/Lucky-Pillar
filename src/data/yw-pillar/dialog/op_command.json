@@ -18,7 +18,7 @@
             },
             "action": {
                 "type": "run_command",
-                "command": "/function yw-pillar:utils/game/remove_one_player"
+                "command": "/function yw-pillar:utils/game/player_left_halfway"
             },
             "tooltip": {
                 "text": "用来处理游玩中的玩家掉线导致游戏无法正常结束的bug",

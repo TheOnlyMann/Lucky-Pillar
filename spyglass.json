@@ -1,9 +1,15 @@
 {
     "env": {
         "gameVersion": "Latest snapshot",
+        "useFilePolling": true,
         "exclude": [
             "build/**",
             "src/data/yw-pillar/modules/**"
-        ]
+        ],
+        "mcmetaSummaryOverrides": {
+            "commands": {
+                "path": "commands.json"
+            }
+        }
     }
 }

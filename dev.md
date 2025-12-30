@@ -65,12 +65,14 @@
 | 23 巨大化 | 玩家尺寸+4 | 
 | 24 核电 | 轻而易举 | 
 | 23 雨天 | 我的世界下雨了☂ | 
+| 24 贪吃的史莱姆 | 嚼嚼嚼~ | 
 
 ## 特殊规则
 
 - [定义](./src/data/yw-pillar/modules/main.bolt)  
 - [调用](./src/data/yw-pillar/function/game/rule/main.mcfunction)  
 - [设置-函数](./src/data/yw-pillar/function/settings/rule.mcfunction)  [设置-对话框](./src/data/yw-pillar/dialog/settings/rule.json)  
+- [效果(tick)](./src/data/yw-pillar/function/game/rule/effect.mcfunction)
 
 |  规则  |  描述  |
 |  ----  | ----  |
@@ -78,4 +80,5 @@
 | 2 大！大！大！ | 玩家尺寸增大为原来的 3/2 |
 | 3 我的伙伴 | 获得一只狐狸 狐狸存活时,给玩家提供力量和生命回复 |
 | 4 一击必杀 | 玩家攻击伤害变成 §l40 |
-| 5 背包交换 | 随机事件固定为 §背包交换 |
+| 5 背包交换 | 随机事件固定为 §l背包交换 |
+| 6 I sea you | 玩家获得 §l隐身,事件结束后获得 5s 发光 |

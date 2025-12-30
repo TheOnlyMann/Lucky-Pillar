@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "long_hand": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "stick",
+                        "components": {
+                            "custom_data": {
+                                "item": "long_hand"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/root",
+    "display": {
+        "title": {
+            "text": "手",
+            "color": "black"
+        },
+        "description": {
+            "text": "手长一点怎么了？",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "stick",
+            "components": {
+                "item_model": "yw-pillar:special/long_hand"
+            }
+        }
+    }
+}

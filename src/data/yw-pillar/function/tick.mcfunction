@@ -3,7 +3,7 @@ execute if score #Game GameStatus matches 1 run function yw-pillar:loop/in_game
 
 function yw-pillar:test/tick
 
-# 雪球和鸡蛋
+# 弹射物
 function yw-pillar:utils/game/item/projectile
 # 持续触发
 function yw-pillar:utils/game/item/sustain

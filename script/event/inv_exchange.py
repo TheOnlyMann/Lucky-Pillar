@@ -1,7 +1,7 @@
 from beet import Context, Function
 
 def beet_default(ctx: Context):
-    for n in range(2, 13):
+    for n in range(2, 25):
         commands = []
 
         for k in range(1,n+1):

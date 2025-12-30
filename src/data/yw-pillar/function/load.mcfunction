@@ -46,6 +46,8 @@ scoreboard objectives add TriggerSetting.Map trigger
 scoreboard objectives add TriggerSetting.Dialog trigger
 scoreboard objectives add TriggerSetting.Rule trigger
 scoreboard objectives add LeaveGame custom:leave_game
+scoreboard objectives add Music dummy
+scoreboard objectives add YanPai dummy
 scoreboard objectives add HP health
 scoreboard objectives setdisplay list HP
 # 使用

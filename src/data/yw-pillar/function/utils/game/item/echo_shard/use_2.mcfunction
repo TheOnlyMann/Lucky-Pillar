@@ -1,0 +1,5 @@
+$execute as @e[type=fireball,tag=sonic_boom,distance=..2,limit=1] run data modify entity @s Motion[0] set from storage yw-pillar:temp motion."$(UUID)".x
+$execute as @e[type=fireball,tag=sonic_boom,distance=..2,limit=1] run data modify entity @s Motion[1] set from storage yw-pillar:temp motion."$(UUID)".y
+$execute as @e[type=fireball,tag=sonic_boom,distance=..2,limit=1] run data modify entity @s Motion[2] set from storage yw-pillar:temp motion."$(UUID)".z
+
+$data remove storage yw-pillar:temp motion."$(UUID)"

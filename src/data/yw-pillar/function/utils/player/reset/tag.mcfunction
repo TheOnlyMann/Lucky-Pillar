@@ -1,0 +1,1 @@
+tag @s remove event.17_king_game

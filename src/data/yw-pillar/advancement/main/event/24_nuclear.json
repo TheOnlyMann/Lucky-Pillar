@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "huaile": {
+            "trigger": "impossible"
+        }
+    },
+    "parent": "yw-pillar:main/root",
+    "display": {
+        "title": {
+            "text": "核电，轻而易举啊...",
+            "color": "white"
+        },
+        "description": {
+            "text": "坏了坏了",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "tnt"
+        }
+    }
+}
