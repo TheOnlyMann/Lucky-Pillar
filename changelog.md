@@ -13,11 +13,12 @@
     - 巨大化
     - 核电
     - 雨天
+    - 贪吃的史莱姆
 - 成就：
     - 我的世界下雨了
     - 一些**物品**和**事件**相关的成就
 - 物品：
-    - 手 
+    - 手
     - 有骨无鸡爪
     - 皮鞋
     - 牌
@@ -36,6 +37,8 @@
 
 ### Added
 
+- Game Modes:
+    - Duo
 - Maps:
     - Moon: Features, low gravity
 - Events:
@@ -46,16 +49,27 @@
     - Gigantification
     - Nuclear Power
     - Rainy Day
-- Achievement:
+    - Greedy Slime
+- Achievements:
     - It's Raining in My World
+    - Some achievements related to **items** and **events**
+- Items:
+    - Hand
+    - Bones Without Chicken Feet
+    - Pixie
+    - Card
 - Quick Menu:
     - OP Commands
+- Music Updated: Now has 4 BGM tracks
 
 ### Changed
+
+- **Echo Shard** can now send light waves by right-clicking
 
 ### Fixed
 
 - **CREEPER** sometimes only summons one lightning creeper
+- Maps don't rain
 
 ## 0.1.5-fix
 

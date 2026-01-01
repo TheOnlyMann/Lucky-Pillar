@@ -14,7 +14,7 @@
 
 ### 核心玩法
 
-- **多人竞技**: 支持 **2-12** 名玩家同场竞技
+- **多人竞技**: 支持 **2-24** 名玩家同场竞技
 - **随机物品**: 每回合随机获得不同的武器和道具
 - **动态事件**: 游戏过程中会触发各种随机事件
 - **生存挑战**: 在有限的平台上生存并击败对手
@@ -98,7 +98,7 @@
 
 ```properties
 difficulty=hard
-motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.6-Beta§r\n§2作者：§r§b§l§n一条鱼丸_
+motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.6§r\n§2作者：§r§b§l§n一条鱼丸_
 resource-pack=https://gh-proxy.org/https://github.com/YuWan886/YuWan-Server/releases/download/pack1/1.21.11-Lucky-Pillar.zip
 spawn-protection=0
 ```

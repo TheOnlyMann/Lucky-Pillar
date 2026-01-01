@@ -14,7 +14,7 @@
 
 ### Core Gameplay
 
-- **Multiplayer Competition**: Supports 2-12 players competing simultaneously
+- **Multiplayer Competition**: Supports 2-24 players competing simultaneously
 - **Random Items**: Receive different weapons and items randomly each round
 - **Dynamic Events**: Various random events triggered during gameplay
 - **Survival Challenge**: Survive on limited platforms and defeat opponents
@@ -30,6 +30,7 @@
 | **Nether** | Classic Dimension: The Nether |
 | **Glass** | Classic |
 | **Ocean** | Special Obtain items through fishing, water is highly toxic |
+| **Moon** | Special Low Gravity |
 
 ### Random Event System
 
@@ -75,7 +76,7 @@
 | **My Partner** | Obtain a fox that provides strength and health regeneration while alive |
 | **One-Hit Kill** | Player attack damage becomes 40 |
 | **Inventory Exchange** | Random events are fixed to Inventory Exchange |
-| **I sea you** | Player gains invisibility, and after the event ends, gains 5 seconds of glowing |
+| **I sea you** | Player gains Invisibility, gains 5s Glowing after event |
 
 ### Game Mechanics
 
@@ -96,7 +97,7 @@
 
 ```properties
 difficulty=hard
-motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.6-Beta§r\n§2作者：§r§b§l§n一条鱼丸_
+motd=§r§c幸§r§c运§r§d之§r§5柱§rv0.1.6§r\n§2作者：§r§b§l§n一条鱼丸_
 resource-pack=https://github.com/YuWan886/YuWan-Server/releases/download/pack1/1.21.11-Lucky-Pillar.zip
 spawn-protection=0
 ```
