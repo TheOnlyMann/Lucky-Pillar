@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "items": "enchanted_book",
-                    "components": {
+                    "predicates": {
                         "custom_data": {
                             "item": "enchanted_book"
                         }
@@ -15,7 +15,7 @@
                     "equipment": {
                         "mainhand": {
                             "items": "enchanted_book",
-                            "components": {
+                            "predicates": {
                                 "custom_data": {
                                     "item": "enchanted_book"
                                 }

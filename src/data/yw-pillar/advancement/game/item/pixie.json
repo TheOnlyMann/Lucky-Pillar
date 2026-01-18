@@ -6,7 +6,7 @@
                 "items": [
                     {
                         "items": "netherite_boots",
-                        "components": {
+                        "predicates": {
                             "custom_data": {
                                 "item": "pixie"
                             }
@@ -17,7 +17,7 @@
                     "equipment": {
                         "feet": {
                             "items": "netherite_boots",
-                            "components": {
+                            "predicates": {
                                 "custom_data": {
                                     "item": "pixie"
                                 }

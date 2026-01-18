@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "items": "stick",
-                    "components": {
+                    "predicates": {
                         "custom_data": {
                             "item": "yanpai"
                         }

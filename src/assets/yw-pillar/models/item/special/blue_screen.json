@@ -1,0 +1,36 @@
+{
+	"parent": "minecraft:item/handheld",
+	"textures": {
+		"layer0": "yw-pillar:item/special/blue_screen"
+	},
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 55],
+			"translation": [0, 4, 2.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, 55],
+			"translation": [0, 4, 2.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 3.5, -0.25],
+			"scale": [0.55, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 3.5, -0.25],
+			"scale": [0.55, 0.4, 0.4]
+		},
+		"ground": {
+			"scale": [0.84, 0.5, 0.5]
+		},
+		"gui": {
+			"scale": [1, 0.6, 1]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0]
+		}
+	}
+}

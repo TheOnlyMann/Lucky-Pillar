@@ -36,12 +36,13 @@ team modify Out color red
 team modify Out prefix {text:"[☠]",color:"red"}
 function yw-pillar:utils/game/add_team
 
+gamerule immediate_respawn true
+gamerule spawner_blocks_work true
 gamerule command_blocks_work true
 gamerule spawn_phantoms false
 gamerule spawn_mobs false
 gamerule advance_weather false
 gamerule advance_time false
-gamerule immediate_respawn true
 gamerule max_block_modifications 1145145
 gamerule players_sleeping_percentage 50
 
@@ -56,3 +57,4 @@ forceload add 16 16 -16 -16
 function yw-pillar:lobby/entity
 
 tellraw @a ["",{text:"[Tips]",color:"gold",bold:true},{text:"数据包初始化完成！",color:"green"}]
+reload

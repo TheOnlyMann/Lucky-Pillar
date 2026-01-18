@@ -1,13 +1,13 @@
 {
     "criteria": {
-        "use_clock":{
-            "trigger": "using_item",
+        "blue_screen_use": {
+            "trigger": "consume_item",
             "conditions": {
                 "item": {
-                    "items": "clock",
+                    "items": "stick",
                     "predicates": {
                         "custom_data": {
-                            "item":"clock"
+                            "item": "blue_screen"
                         }
                     }
                 }
@@ -15,6 +15,6 @@
         }
     },
     "rewards": {
-        "function": "yw-pillar:utils/game/item/clock/use"
+        "function": "yw-pillar:utils/game/item/blue_screen"
     }
 }

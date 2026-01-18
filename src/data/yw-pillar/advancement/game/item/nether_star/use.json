@@ -5,7 +5,7 @@
             "conditions": {
                 "item": {
                     "items": "nether_star",
-                    "components": {
+                    "predicates": {
                         "custom_data": {
                             "item":"nether_star"
                         }

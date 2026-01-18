@@ -454,7 +454,24 @@
                                     "bold": true,
                                     "italic": false
                                 },
-                                "lore":[[{"color":"gray","text":"右键起飞"}],[{"color":"aqua","text":"冷却时间："},{"color":"gold","text":"5s"}]],
+                                "lore": [
+                                    [
+                                        {
+                                            "color": "gray",
+                                            "text": "右键起飞"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "color": "aqua",
+                                            "text": "冷却时间："
+                                        },
+                                        {
+                                            "color": "gold",
+                                            "text": "5s"
+                                        }
+                                    ]
+                                ],
                                 "enchantments": {
                                     "yw-pillar:wind_brust_plus": 1
                                 },
@@ -469,15 +486,123 @@
                                         "amount": 2,
                                         "operation": "add_value",
                                         "slot": "mainhand",
-                                        "display": {"type": "hidden"}
+                                        "display": {
+                                            "type": "hidden"
+                                        }
                                     }
                                 ],
-                                "tooltip_display":{
-                                    "hidden_components": ["enchantments"]
+                                "tooltip_display": {
+                                    "hidden_components": [
+                                        "enchantments"
+                                    ]
                                 },
                                 "custom_data": {
                                     "item": "fly_mace"
                                 }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "蓝屏",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [
+                                    [
+                                        {
+                                            "color": "gray",
+                                            "text": "随机一名玩家(不包括自己)“蓝屏”"
+                                        }
+                                    ]
+                                ],
+                                "consumable": {
+                                    "animation": "none",
+                                    "consume_seconds": 0.01,
+                                    "has_consume_particles": false,
+                                    "sound": "ui.button.click"
+                                },
+                                "item_model": "yw-pillar:special/blue_screen",
+                                "custom_data": {
+                                    "item": "blue_screen"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "pig_spawn_egg",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "小飞船",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [{"text": "生成一艘会飞的船","color": "gray"},[{"color":"gold","text":"45s"},{"color":"gray","text":"后消失"}]],
+                                "entity_data": {
+                                    "id": "oak_boat",
+                                    "CustomName": {
+                                        "text": "小飞船",
+                                        "color": "gold",
+                                        "bold": true,
+                                        "italic": false
+                                    },
+                                    "Tags": ["fly_boat"]
+                                },
+                                "enchantment_glint_override": true,
+                                "custom_data": {
+                                    "item":"fly_boat"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "stick",
+                    "functions": [
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "custom_name": {
+                                    "text": "红包",
+                                    "color": "gold",
+                                    "bold": true,
+                                    "italic": false
+                                },
+                                "lore": [{"text": "新年好~","color": "red"}],
+                                "consumable": {
+                                    "animation": "none",
+                                    "consume_seconds": 0.01,
+                                    "has_consume_particles": false,
+                                    "sound": {
+                                        "sound_id": ""
+                                    }
+                                },
+                                "item_model":"yw-pillar:special/hongbao",
+                                "custom_data": {
+                                    "item":"hongbao"
+                                }
+                            }
+                        },
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 8
                             }
                         }
                     ]

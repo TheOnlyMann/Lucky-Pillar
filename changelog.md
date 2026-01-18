@@ -8,6 +8,8 @@
 - 物品：
     - 铁剑(1.7.10)：无攻击冷却
     - 让你飞起来：重锤，右键获得一个向上的动量
+    - 蓝屏：随机一名玩家(不包括自己)“蓝屏”
+    - 小飞船：生成一艘会飞的船，45s后消失
 - 规则：
     - 虚空的仁慈：掉落虚空时将玩家向上传送60格
 
@@ -19,6 +21,28 @@
 ## Fixed
 
 - 修复玩家属性重置不了的bug
+
+## Added
+
+- Mod compatibility: All enchantments (should be), [Farmer's Delight](https://modrinth.com/mod/7vxePowz), [Mutant Monsters](https://modrinth.com/mod/derP0ten)
+- Events:
+    - Random Swap: Players randomly swap positions
+- Items:
+    - Iron Sword (1.7.10): No attack cooldown
+    - Make You Fly: Heavy hammer, right-click to gain upward momentum
+    - Blue Screen: Randomly selects one player (excluding self) to "blue screen"
+    - Small Spaceship: Spawns a flying boat that disappears after 45 seconds
+- Rules:
+    - Void's Mercy: When falling into the void, teleport the player upward by 60 blocks
+
+## Changed
+
+- **Nether Star** can now be eaten
+- Removed some useless items, such as grass
+
+## Fixed
+
+- Fixed bug where player attributes couldn't be reset
 
 ## 0.1.6
 

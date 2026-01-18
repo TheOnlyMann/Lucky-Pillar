@@ -3,9 +3,6 @@
         "test":{
             "trigger": "impossible",
             "conditions": {
-                "player": {
-                    "nbt": "{Health:0.0f}"
-                }
             }
         }
     },
