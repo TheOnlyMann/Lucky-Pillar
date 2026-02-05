@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "long_hand": {
+        "hongbao": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
@@ -8,7 +8,7 @@
                         "items": "stick",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "hongbao"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/witch_apple",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "红包",
+            "color": "red"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "恭喜发财！",
             "color": "gray",
             "italic": true
         },
         "icon": {
             "id": "stick",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "item_model": "yw-pillar:special/hongbao"
             }
         }
     }

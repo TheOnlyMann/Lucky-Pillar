@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "long_hand": {
+        "hypnosis_app": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
@@ -8,7 +8,7 @@
                         "items": "stick",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "hypnosis_app"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/pixie",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "催眠 app",
+            "color": "light_purple"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "你是谁？",
             "color": "gray",
             "italic": true
         },
         "icon": {
             "id": "stick",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "item_model": "yw-pillar:special/hypnosis_app"
             }
         }
     }

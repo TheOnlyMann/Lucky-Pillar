@@ -17,7 +17,10 @@
                                     "italic": false
                                 },
                                 "enchantments": {
-                                    "knockback": 3
+                                    "knockback": 4
+                                },
+                                "custom_data": {
+                                    "item":"knockback_stick"
                                 }
                             }
                         }
@@ -88,6 +91,9 @@
                                     "efficiency": 5,
                                     "fortune": 3,
                                     "mending": 1
+                                },
+                                "custom_data": {
+                                    "item":"godly_pickaxe"
                                 }
                             }
                         }
@@ -436,7 +442,10 @@
                                             "type": "hidden"
                                         }
                                     }
-                                ]
+                                ],
+                                "custom_data": {
+                                    "item":"iron_sword"
+                                }
                             }
                         }
                     ]
@@ -562,6 +571,7 @@
                                     },
                                     "Tags": ["fly_boat"]
                                 },
+                                "item_model": "oak_boat",
                                 "enchantment_glint_override": true,
                                 "custom_data": {
                                     "item":"fly_boat"
@@ -615,7 +625,7 @@
                             "function": "set_components",
                             "components": {
                                 "custom_name": {
-                                    "text": "催眠 App",
+                                    "text": "催眠 app",
                                     "color": "light_purple",
                                     "bold": true,
                                     "italic": false

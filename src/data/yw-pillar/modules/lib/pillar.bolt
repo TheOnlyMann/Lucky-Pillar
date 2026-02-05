@@ -3,15 +3,16 @@ def pillar_tempalte(name,block):
         place template f"yw-pillar:pillar/{name}/9" -20 0 -20
         fill 0 1 8 0 63 8 f"{block}"
         fill 0 1 -8 0 63 -8 f"{block}"
-        place template yw-pillar:red_vs_blue/cage_red -2 63 6
-        place template yw-pillar:red_vs_blue/cage_blue -2 64 -10
+        place template f"yw-pillar:pillar/{name}/red" -2 63 6
+        place template f"yw-pillar:pillar/{name}/blue" -2 63 -10
 
         tp @a[scores={Number=1}] 0 65 8 -180 0
         tp @a[scores={Number=2}] 0 65 -8 0 0
     
     function f"yw-pillar:game/pillars/common/clear_cage_red_vs_blue":
-        place template yw-pillar:red_vs_blue/cage_empty -2 63 6
-        place template yw-pillar:red_vs_blue/cage_empty -2 64 -10
+        place template yw-pillar:rvb_cage_empty -2 63 6
+        place template yw-pillar:rvb_cage_empty -2 63 -10
+        execute if score #Game MapID matches 201 run function yw-pillar:game/pillars/sea/clear_cage_red_vs_blue
 
     function f"yw-pillar:game/pillars/{name}/2":
         place template f"yw-pillar:pillar/{name}/2" -16 0 -16
@@ -384,3 +385,5 @@ def pillar_tempalte(name,block):
         place template yw-pillar:cage_empty -1 64 -16
         place template yw-pillar:cage_empty 7 64 -14
         place template yw-pillar:cage_empty 12 64 -9
+        
+        execute if score #Game MapID matches 201 run function yw-pillar:game/pillars/sea/clear_cage

@@ -1,14 +1,14 @@
 {
     "criteria": {
-        "long_hand": {
+        "clock": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "items": "stick",
+                        "items": "clock",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "clock"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/blue_screen",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "时间",
+            "color": "gold"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "「我掌握了逆转时间的公式」",
             "color": "gray",
             "italic": true
         },
         "icon": {
-            "id": "stick",
+            "id": "clock",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "enchantment_glint_override": true
             }
         }
     }

@@ -1,14 +1,14 @@
 {
     "criteria": {
-        "long_hand": {
+        "iron_sword": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "items": "stick",
+                        "items": "iron_sword",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "iron_sword"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/nether_star",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "铁剑",
+            "color": "gold"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "想你了——1.7.10",
             "color": "gray",
             "italic": true
         },
         "icon": {
-            "id": "stick",
+            "id": "iron_sword",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "enchantment_glint_override": true
             }
         }
     }

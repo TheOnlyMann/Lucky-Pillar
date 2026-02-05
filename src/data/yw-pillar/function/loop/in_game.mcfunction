@@ -12,6 +12,3 @@ function yw-pillar:game/event/duration_tick
 function yw-pillar:game/rule/effect
 # 生成生物
 execute as @a[tag=ingame,tag=!out] run function yw-pillar:utils/game/entity/summon
-
-execute store result score #Game PlayerCount run list
-execute if score #Game PlayerCount matches 0 run function yw-pillar:game/end

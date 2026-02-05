@@ -10,7 +10,7 @@ gamemode spectator @s
 tag @s add out
 team join Out
 
-execute if score #Game MapNumber matches 102 run schedule function yw-pillar:game/pillars/nether/dead 5t
+execute if score #Game MapID matches 102 run schedule function yw-pillar:game/pillars/nether/dead 5t
 
 function yw-pillar:utils/player/count_alive
 # 检测剩余玩家是否同队伍

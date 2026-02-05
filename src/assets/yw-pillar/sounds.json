@@ -78,5 +78,23 @@
             }
         ],
         "subtitle": "yw-pillar.sound.yanpai"
+    },
+    "meme.wddd": {
+        "sounds": [
+            {
+                "name": "yw-pillar:meme/wddd",
+                "volume": 1
+            }
+        ],
+        "subtitle": "yw-pillar.sound.meme.wddd"
+    },
+    "meme.bblb": {
+        "sounds": [
+            {
+                "name": "yw-pillar:meme/bblb",
+                "volume": 1
+            }
+        ],
+        "subtitle": "yw-pillar.sound.meme.bblb"
     }
 }

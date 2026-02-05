@@ -1,14 +1,14 @@
 {
     "criteria": {
-        "long_hand": {
+        "bruce": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "items": "stick",
+                        "items": "wolf_spawn_egg",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "bruce"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/long_hand",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "布鲁斯",
+            "color": "gold"
         },
-        "description": {
-            "text": "手长一点怎么了？",
+        "description":  {
+            "text": "好样的,布鲁斯！",
             "color": "gray",
             "italic": true
         },
         "icon": {
-            "id": "stick",
+            "id": "wolf_spawn_egg",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "enchantment_glint_override": true
             }
         }
     }

@@ -1,4 +1,4 @@
-scoreboard players operation #Game MapNumber = @s TriggerSetting.Map
+scoreboard players operation #Game MapID = @s TriggerSetting.Map
 
 tellraw @a ["","\n\n\n\n=-------------------------=\n",{text:"[Tips]",color:"gold",bold:true},{selector:"@s",bold:true},{text:"已修改设置！",color:"aqua"},"\n"]
 
@@ -18,6 +18,10 @@ tellraw @a ["","\n\n\n\n=-------------------------=\n",{text:"[Tips]",color:"gol
     execute if score @s TriggerSetting.Map matches 104 run data modify storage yw-pillar:settings game merge value {map_name:"虚空",map_id:void}
     execute if score @s TriggerSetting.Map matches 104 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"虚空",color:"green"}]
     execute if score @s TriggerSetting.Map matches 104 run function aj:pillar/void
+# TNT
+    execute if score @s TriggerSetting.Map matches 105 run data modify storage yw-pillar:settings game merge value {map_name:"TNT",map_id:tnt}
+    execute if score @s TriggerSetting.Map matches 105 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"TNT",color:"green"}]
+    execute if score @s TriggerSetting.Map matches 105 run function aj:pillar/tnt
 # 海洋
     execute if score @s TriggerSetting.Map matches 201 run tellraw @a ["",{text:"      当前地图：",color:"gold"},{nbt:"game.map_name",storage:"yw-pillar:settings",color:"red"},"->",{text:"海洋",color:"green"}]
     execute if score @s TriggerSetting.Map matches 201 run data modify storage yw-pillar:settings game merge value {map_name:"海洋",map_id:sea}

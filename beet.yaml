@@ -32,10 +32,10 @@ pipeline:
     - script.event.location_exchange
     - script.insert
     - script.mod_tag
-    # - script.custom_function_headers
-    # - stewbeet.plugins.auto.headers
-    # - beet.contrib.minify_json
-    # - script.archive
+    - script.custom_function_headers
+    - stewbeet.plugins.auto.headers
+    - beet.contrib.minify_json
+    - script.archive
     
 meta:
     bolt:

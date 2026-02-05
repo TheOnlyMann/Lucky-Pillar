@@ -1,14 +1,14 @@
 {
     "criteria": {
-        "long_hand": {
+        "fly_boat": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "items": "stick",
+                        "items": "pig_spawn_egg",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "fly_boat"
                             }
                         }
                     }
@@ -16,22 +16,19 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/yanpai",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "小飞船",
+            "color": "aqua"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "小飞船来喽~",
             "color": "gray",
             "italic": true
         },
         "icon": {
-            "id": "stick",
-            "components": {
-                "item_model": "yw-pillar:special/long_hand"
-            }
+            "id": "oak_boat"
         }
     }
 }

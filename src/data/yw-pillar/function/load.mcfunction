@@ -7,7 +7,7 @@ scoreboard objectives add GameID dummy
 scoreboard objectives add EventID dummy
 scoreboard objectives add RuleID dummy
 scoreboard objectives add PlayerCount dummy
-scoreboard objectives add MapNumber dummy
+scoreboard objectives add MapID dummy
 scoreboard objectives add BorderWidth dummy
 scoreboard objectives add CollapseTimes dummy
 scoreboard objectives add PlayerCount.Ready dummy

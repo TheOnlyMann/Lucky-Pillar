@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "long_hand": {
+        "knockback_stick": {
             "trigger": "inventory_changed",
             "conditions": {
                 "items": [
@@ -8,7 +8,7 @@
                         "items": "stick",
                         "components": {
                             "custom_data": {
-                                "item": "long_hand"
+                                "item": "knockback_stick"
                             }
                         }
                     }
@@ -16,21 +16,21 @@
             }
         }
     },
-    "parent": "yw-pillar:main/item/bones_without_chicken_feet",
+    "parent": "yw-pillar:main/item/fly_boat",
     "display": {
         "title": {
-            "text": "手",
-            "color": "black"
+            "text": "击退棒",
+            "color": "gold"
         },
         "description": {
-            "text": "手长一点怎么了？",
+            "text": "bye~",
             "color": "gray",
-            "italic": true
+            "italic": false
         },
         "icon": {
             "id": "stick",
             "components": {
-                "item_model": "yw-pillar:special/long_hand"
+                "enchantment_glint_override": true
             }
         }
     }
