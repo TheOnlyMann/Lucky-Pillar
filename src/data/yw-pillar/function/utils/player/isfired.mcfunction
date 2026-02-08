@@ -1,0 +1,1 @@
+execute store result score @s IsFired run data get entity @s Fire

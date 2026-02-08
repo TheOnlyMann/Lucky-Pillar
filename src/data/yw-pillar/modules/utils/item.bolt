@@ -1,4 +1,4 @@
 # 附魔
 append enchantment_tag minecraft:in_enchanting_table {
-    "values":["yw-pillar:wind_brust_plus"]
+    "values":["yw-pillar:wind_brust_plus","yw-pillar:double_jump"]
 }

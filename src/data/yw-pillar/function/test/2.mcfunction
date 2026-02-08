@@ -1,0 +1,1 @@
+give @s diamond_boots[enchantments={"yw-pillar:double_jump":1}]

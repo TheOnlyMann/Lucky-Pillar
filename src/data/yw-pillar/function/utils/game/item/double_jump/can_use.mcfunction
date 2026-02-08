@@ -1,0 +1,1 @@
+scoreboard players set @s Enchant.double_jump 2

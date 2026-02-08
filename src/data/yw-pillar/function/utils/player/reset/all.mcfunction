@@ -5,3 +5,4 @@ function yw-pillar:utils/player/reset/event
 function yw-pillar:utils/player/reset/xp
 function yw-pillar:utils/player/reset/scoreboard
 function yw-pillar:utils/player/reset/tag
+function yw-pillar:utils/player/reset/fired

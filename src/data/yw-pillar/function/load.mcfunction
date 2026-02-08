@@ -50,6 +50,7 @@ scoreboard objectives add LeaveGame custom:leave_game
 scoreboard objectives add Music dummy
 scoreboard objectives add YanPai dummy
 scoreboard objectives add LuckyBlock dummy
+scoreboard objectives add IsFired dummy
 scoreboard objectives add HP health
 scoreboard objectives setdisplay list HP
 # 使用
@@ -73,6 +74,7 @@ scoreboard objectives setdisplay list HP
     scoreboard objectives add Item.clock_using_time dummy
     scoreboard objectives add Item.fly_boat_duration dummy
     scoreboard objectives add Enchant.wind_brust_plus_cooldown dummy
+    scoreboard objectives add Enchant.double_jump dummy
 
 ## Utils
 scoreboard objectives add Pos.X dummy

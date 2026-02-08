@@ -1,0 +1,2 @@
+execute positioned 100 -18 109 as @e[type=item_display,distance=..2,tag=lobby.enchant,limit=1] run data modify entity @s interpolation_duration set value 2
+execute positioned 100 -18 109 as @e[type=item_display,distance=..2,tag=lobby.enchant,limit=1] run data modify entity @s transformation set value {translation:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],scale:[1,1,1],right_rotation:[0f,0f,0f,1f]}

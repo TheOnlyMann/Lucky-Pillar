@@ -7,8 +7,11 @@
     - 岩浆上升：岩浆上升速度 1格/s 
 - 物品：
     - 催眠 app：随机一名玩家(不包括自己)获得debuff
+    - 火箭靴：在空中可以二段跳
+    - 隐身围巾：可以使玩家隐身
+    - 跑鞋：移动速度+0.1
 - 地图：
-    - TNT
+    - TNT：tnt会向上飞(10%的概率)
     - 活板门
 - **鱼丸说**：作者碎碎念
 - 补全物品进度
@@ -22,6 +25,34 @@
 # Fixed
 
 - 有时候没有物品
+- 更换地图的提示错误
+
+# Added
+
+- **Red vs. Blue Mode**
+- Events:
+    - Lava Rise: Lava rises at a speed of 1 block/s
+- Items:
+    - Hypnosis App: A random player (excluding yourself) receives a debuff
+    - Rocket Boots: Allows a double jump while in the air
+    - Invisibility Scarf: Makes the player invisible
+    - Running Shoes: Movement speed +0.1
+    - TNT: TNT will fly upward (10% probability)
+- Maps:
+    - Trapdoor
+- **鱼丸说**: Author's ramblings
+- Complete item advancement
+- Heavy Hammer PvP is now located right under the lobby
+
+# Changed
+
+- Friendly fire has been removed in Duo mode
+- **Hand** interaction distance: 6 -> 4
+
+# Fixed
+
+- Sometimes there are no items
+- Incorrect prompt for changing maps
 
 
 # 0.1.7

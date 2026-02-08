@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "yw-pillar:lobby/enchant"
+        "function": "yw-pillar:lobby/enchant/1"
     }
 } 

@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "invisible_scarf": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "stick",
+                        "components": {
+                            "custom_data": {
+                                "item": "invisible_scarf"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/clock",
+    "display": {
+        "title": {
+            "text": "隐身围巾",
+            "color": "gold"
+        },
+        "description": {
+            "text": "你看不见我",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "stick",
+            "components": {
+                "item_model": "yw-pillar:special/invisible_scarf"
+            }
+        }
+    }
+}

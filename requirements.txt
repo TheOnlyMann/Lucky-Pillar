@@ -2,4 +2,4 @@ beet==0.113.0
 bolt==0.50.1
 mecha==0.102.2
 stewbeet==3.0.3
-stouputils==1.20.2
+stouputils==1.20.3

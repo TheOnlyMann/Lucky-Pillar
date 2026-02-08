@@ -1,0 +1,149 @@
+{
+    "description": {
+        "text": "二段跳"
+    },
+    "effects": {
+        "tick": [
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "yw-pillar:utils/game/item/double_jump/ground"
+                },
+                "requirements": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "flags": {
+                                "is_on_ground": true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "yw-pillar:utils/game/item/double_jump/can_use"
+                },
+                "requirements": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "flags": {
+                                "is_on_ground": false
+                            },
+                            "type_specific": {
+                                "type": "player",
+                                "input": {
+                                    "jump": false
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "Enchant.double_jump": -1
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "apply_impulse",
+                    "coordinate_scale": [
+                        0,
+                        1.0,
+                        0
+                    ],
+                    "direction": [
+                        0.0,
+                        1.3,
+                        0.0
+                    ],
+                    "magnitude": {
+                        "type": "minecraft:linear",
+                        "base": 0.45,
+                        "per_level_above_first": 0.5
+                    }
+                },
+                "requirements": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "flags": {
+                                "is_on_ground": false
+                            },
+                            "type_specific": {
+                                "type": "player",
+                                "input": {
+                                    "jump": true
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "Enchant.double_jump": {
+                                "min": 1
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "effect": {
+                    "type": "run_function",
+                    "function": "yw-pillar:utils/game/item/double_jump/use"
+                },
+                "requirements": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "flags": {
+                                "is_on_ground": false
+                            },
+                            "type_specific": {
+                                "type": "player",
+                                "input": {
+                                    "jump": true
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "condition": "entity_scores",
+                        "entity": "this",
+                        "scores": {
+                            "Enchant.double_jump": {
+                                "min": 1
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "min_cost": {
+        "base": 15,
+        "per_level_above_first": 9
+    },
+    "max_cost": {
+        "base": 65,
+        "per_level_above_first": 9
+    },
+    "max_level": 3,
+    "slots": [
+        "feet"
+    ],
+    "supported_items": "#enchantable/foot_armor",
+    "weight": 2,
+    "anvil_cost": 4
+}

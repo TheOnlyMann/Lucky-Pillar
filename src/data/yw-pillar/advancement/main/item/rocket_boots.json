@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "rocket_boots": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "diamond_boots",
+                        "predicates": {
+                            "custom_data": {
+                                "item":"rocket_boots"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/knockback_stick",
+    "display": {
+        "title": {
+            "text": "火箭靴",
+            "color": "red"
+        },
+        "description": {
+            "text": "是二段跳！",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "diamond_boots",
+            "components": {
+                "enchantment_glint_override": true
+            }
+        }
+    }
+}

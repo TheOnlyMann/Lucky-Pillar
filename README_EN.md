@@ -67,6 +67,7 @@
 | **Rainy Day** | Weather changes to rain, obtain a trident with Riptide III |
 | **Greedy Slime** | Spawns a slime that increases in size by 1 for every 5 items it consumes |
 | **Location Exchange** | Random exchange of player locations |
+| **Lava Rising** | Lava rises at a speed of 1 b/s | 
 
 ### Special Rules
 

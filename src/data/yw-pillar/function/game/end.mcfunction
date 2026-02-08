@@ -14,15 +14,8 @@ scoreboard players set #Game EventID 0
 scoreboard players reset * var
 scoreboard objectives remove KilledCheck
 
-data modify storage yw-pillar:settings game.event_name set value ''
-function yw-pillar:game/pillars/reset_1
-execute in overworld run function yw-pillar:lobby/entity
-execute as @a run function yw-pillar:utils/player/reset/all
-function yw-pillar:game/sidebar/lobby
-function yw-pillar:schedule/clear
-
-tag @a remove out
-tag @a remove ingame
+tag @a[tag=out] remove out
+tag @a[tag=ingame] remove ingame
 tag @a[tag=ready] remove spectator
 team join Ready @a[tag=ready]
 
@@ -32,6 +25,13 @@ effect clear @a
 gamemode adventure @a
 execute in overworld run tp @a 100 3 100
 execute in overworld run spawnpoint @a 100 3 100
+
+data modify storage yw-pillar:settings game.event_name set value ''
+function yw-pillar:game/pillars/reset_1
+execute in overworld run function yw-pillar:lobby/entity
+execute as @a run function yw-pillar:utils/player/reset/all
+function yw-pillar:game/sidebar/lobby
+function yw-pillar:schedule/clear
 
 # 节日
 function yw-pillar:utils/festival/all

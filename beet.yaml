@@ -28,8 +28,7 @@ resource_pack:
 
 pipeline:
     - mecha
-    - script.event.inv_exchange
-    - script.event.location_exchange
+    - script.event
     - script.insert
     - script.mod_tag
     - script.custom_function_headers
@@ -41,5 +40,5 @@ meta:
     bolt:
       entrypoint: 
         - '*'
-    mecha:
-        commands: "commands.json"
+    # mecha:
+    #     commands: "commands.json"

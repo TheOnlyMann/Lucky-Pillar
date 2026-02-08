@@ -1,0 +1,37 @@
+{
+    "criteria": {
+        "running_shoes": {
+            "trigger": "inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "iron_boots",
+                        "predicates": {
+                            "custom_data": {
+                                "item":"running_shoes"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "parent": "yw-pillar:main/item/fly_mace",
+    "display": {
+        "title": {
+            "text": "跑鞋",
+            "color": "gold"
+        },
+        "description": {
+            "text": "飞一般的感觉",
+            "color": "gray",
+            "italic": true
+        },
+        "icon": {
+            "id": "iron_boots",
+            "components": {
+                "enchantment_glint_override": true
+            }
+        }
+    }
+}
